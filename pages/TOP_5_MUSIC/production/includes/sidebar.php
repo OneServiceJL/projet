@@ -3,7 +3,7 @@
         <div id="sidebar-menu" class="sidebar-menu">
             <ul>
                 <li class="<?php echo (basename($_SERVER['PHP_SELF']) == 'index.php') ? 'active' : ''; ?>">
-                    <a href="../index.php">
+                    <a href="index.php">
                         <span>Dashboard</span>
                     </a>
                 </li>
