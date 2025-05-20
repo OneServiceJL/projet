@@ -9,7 +9,7 @@
                 </li>
                 
                 <!-- Company Branches -->
-                <li class="menu-title">Branches</li>
+                <li class="menu-title">Devisions</li>
                 
                 <!-- Top 5 Sai (Studio Production) -->
                 <li class="submenu">
@@ -35,6 +35,7 @@
                         <span class="menu-arrow"></span>
                     </a>
                     <ul>
+                        <li><a href="dashboard-event.php">Dashboard Event</a></li>
                         <li><a href="event-bookings.php">Event Bookings</a></li>
                         <li><a href="equipment-rentals.php">Equipment Rentals</a></li>
                         <li><a href="wedding-packages.php">Wedding Packages</a></li>

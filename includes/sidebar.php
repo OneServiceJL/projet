@@ -36,6 +36,7 @@
                         <span class="menu-arrow"></span>
                     </a>
                     <ul>
+                        <li><a href="pages/dashboard-event.php">Dashboard Event</a></li>
                         <li><a href="pages/event-bookings.php">Event Bookings</a></li>
                         <li><a href="pages/equipment-rentals.php">Equipment Rentals</a></li>
                         <li><a href="pages/wedding-packages.php">Wedding Packages</a></li>

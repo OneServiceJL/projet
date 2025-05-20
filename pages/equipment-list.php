@@ -1,3 +1,7 @@
+<?php
+require_once('../config/config.php');
+?>
+
 <?php include 'includes/header.php'; ?>
 
 <div class="page-wrapper">
@@ -8,11 +12,52 @@
                 <h6>Manage your products</h6>
             </div>
             <div class="page-btn">
+                <button type="button" class="btn btn-added" data-bs-toggle="modal" data-bs-target="#addStoreModal">
+                    <img src="../assets/img/icons/plus.svg" alt="img" class="me-1">Add Store
+                </button>
+            </div>
+            <div class="page-btn">
                 <button type="button" class="btn btn-added" data-bs-toggle="modal" data-bs-target="#addProductModal">
                     <img src="../assets/img/icons/plus.svg" alt="img" class="me-1">Add New Product
                 </button>
             </div>
 
+            <!-- Add Store Modal -->
+            <div class="modal fade" id="addStoreModal" tabindex="-1" aria-labelledby="addStoreModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="addStoreModalLabel">Add Store</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="addStoreForm" method="POST" action="">
+                                <div class="mb-3">
+                                    <label for="storeName" class="form-label">Store Name</label>
+                                    <input type="text" class="form-control" id="storeName" name="storeName" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="storeAddress" class="form-label">Address</label>
+                                    <input type="text" class="form-control" id="storeAddress" name="storeAddress" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="storeContact" class="form-label">Contact Number</label>
+                                    <input type="text" class="form-control" id="storeContact" name="storeContact" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="storePhone" class="form-label">Phone Number</label>
+                                    <input type="text" class="form-control" id="storePhone" name="storePhone" required>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                    <button type="submit" class="btn btn-primary">Add Store</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Fin du modal -->
             <!-- Add Product Modal -->
             <div class="modal fade" id="addProductModal" tabindex="-1" aria-labelledby="addProductModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
@@ -32,16 +77,26 @@
                                     <input type="text" class="form-control" id="itemName" name="itemName" required>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="category" class="form-label">Category</label>
-                                    <input type="text" class="form-control" id="category" name="category" required>
-                                </div>
-                                <div class="mb-3">
                                     <label for="brandModel" class="form-label">Brand/Model</label>
                                     <input type="text" class="form-control" id="brandModel" name="brandModel" required>
                                 </div>
                                 <div class="mb-3">
+                                    <label for="serialNumber" class="form-label">Serial Number</label>
+                                    <input type="text" class="form-control" id="serialNumber" name="serialNumber" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="category" class="form-label">Category</label>
+                                    <select class="form-select" id="category" name="category" required>
+                                        <option value="">Select Category</option>
+                                        <option value="Event">Event</option>
+                                        <option value="Radio">Radio</option>
+                                        <option value="Studio">Studio</option>
+                                        <option value="Production">Production</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
                                     <label for="condition" class="form-label">Condition</label>
-                                    <select class="form-control" id="condition" name="condition" required>
+                                    <select class="form-select" id="condition" name="condition" required>
                                         <option value="">Select Condition</option>
                                         <option value="New">New</option>
                                         <option value="Excellent">Excellent</option>
@@ -52,7 +107,7 @@
                                 </div>
                                 <div class="mb-3">
                                     <label for="status" class="form-label">Status</label>
-                                    <select class="form-control" id="status" name="status" required>
+                                    <select class="form-select" id="status" name="status" required>
                                         <option value="">Select Status</option>
                                         <option value="Available">Available</option>
                                         <option value="In Use">In Use</option>
@@ -62,7 +117,17 @@
                                 </div>
                                 <div class="mb-3">
                                     <label for="location" class="form-label">Location</label>
-                                    <input type="text" class="form-control" id="location" name="location" required>
+                                    <select class="form-select" id="location" name="location" required>
+                                        <option value="">Select Location</option>
+                                        <?php
+                                        $stmt = $conn->prepare("SELECT store_name FROM stores");
+                                        $stmt->execute();
+                                        $result = $stmt->get_result();
+                                        while ($row = $result->fetch_assoc()) {
+                                            echo "<option value='" . $row['store_name'] . "'>" . $row['store_name'] . "</option>";
+                                        }
+                                        ?>
+                                    </select>
                                 </div>
                                 <div class="mb-3">
                                     <label for="lastMaintenance" class="form-label">Last Maintenance</label>
@@ -127,120 +192,25 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <!-- Audio Equipment -->
-                            <tr>
-                                <td>AE-1001</td>
-                                <td class="productimgname">
-                                    <a href="javascript:void(0);">Full PA System</a>
-                                </td>
-                                <td>Audio</td>
-                                <td>JBL EON712</td>
-                                <td><span class="badge bg-success">Excellent</span></td>
-                                <td><span class="badge bg-success">Available</span></td>
-                                <td>Warehouse A</td>
-                                <td>15-10-2023</td>
-                                <td>$200/day</td>
-                                <td>
-                                    <a class="me-3" href="equipment_details.php">
-                                        <img src="../assets/img/icons/eye.svg" alt="View">
-                                    </a>
-                                    <a class="me-3 editDetail" data-bs-toggle="modal" data-bs-target="#editDetailModal" data-id="AE-1001">
-                                        <img src="../assets/img/icons/edit.svg" alt="Edit">
-                                    </a>
-                                </td>
-                            </tr>
-
-                            <!-- Lighting Equipment -->
-                            <tr>
-                                <td>LE-1002</td>
-                                <td class="productimgname">
-                                    <a href="javascript:void(0);">LED Moving Head</a>
-                                </td>
-                                <td>Lighting</td>
-                                <td>Chauvet R2X</td>
-                                <td><span class="badge bg-warning">Good</span></td>
-                                <td><span class="badge bg-info">Reserved</span></td>
-                                <td>Main Stage</td>
-                                <td>20-10-2023</td>
-                                <td>$75/day</td>
-                                <td>
-                                    <a class="me-3" href="equipment_details.php">
-                                        <img src="../assets/img/icons/eye.svg" alt="View">
-                                    </a>
-                                    <a class="me-3 editDetail" data-bs-toggle="modal" data-bs-target="#editDetailModal" data-id="LE-1002">
-                                        <img src="../assets/img/icons/edit.svg" alt="Edit">
-                                    </a>
-                                </td>
-                            </tr>
-
-                            <!-- Wedding Equipment -->
-                            <tr>
-                                <td>WE-1003</td>
-                                <td class="productimgname">
-                                    <a href="javascript:void(0);">Premium Wedding Package</a>
-                                </td>
-                                <td>Wedding</td>
-                                <td>Luxury Events</td>
-                                <td><span class="badge bg-success">Excellent</span></td>
-                                <td><span class="badge bg-danger">Booked</span></td>
-                                <td>On Event</td>
-                                <td>01-11-2023</td>
-                                <td>$1,200/day</td>
-                                <td>
-                                    <a class="me-3" href="equipment_details.php">
-                                        <img src="../assets/img/icons/eye.svg" alt="View">
-                                    </a>
-                                    <a class="me-3 editDetail" data-bs-toggle="modal" data-bs-target="#editDetailModal" data-id="RS-1004">
-                                        <img src="../assets/img/icons/edit.svg" alt="Edit">
-                                    </a>
-                                </td>
-                            </tr>
-
-                            <!-- Radio Studio Equipment -->
-                            <tr>
-                                <td>RS-1004</td>
-                                <td class="productimgname">
-                                    <a href="javascript:void(0);">Broadcast Console</a>
-                                </td>
-                                <td>Radio Studio</td>
-                                <td>Energy Radio Pro</td>
-                                <td><span class="badge bg-success">Excellent</span></td>
-                                <td><span class="badge bg-success">Available</span></td>
-                                <td>Studio 3</td>
-                                <td>05-11-2023</td>
-                                <td>$350/day</td>
-                                <td>
-                                    <a class="me-3" href="equipment_details.php">
-                                        <img src="../assets/img/icons/eye.svg" alt="View">
-                                    </a>
-                                    <a class="me-3 editDetail" data-bs-toggle="modal" data-bs-target="#editDetailModal" data-id="RS-1004">
-                                        <img src="../assets/img/icons/edit.svg" alt="Edit">
-                                    </a>
-                                </td>
-                            </tr>
-
-                            <!-- Backline Equipment -->
-                            <tr>
-                                <td>BE-1005</td>
-                                <td class="productimgname">
-                                    <a href="javascript:void(0);">Drum Kit (Full)</a>
-                                </td>
-                                <td>Backline</td>
-                                <td>Pearl Export</td>
-                                <td><span class="badge bg-warning">Good</span></td>
-                                <td><span class="badge bg-warning">Maintenance</span></td>
-                                <td>Service Dept</td>
-                                <td>12-10-2023</td>
-                                <td>$120/day</td>
-                                <td>
-                                    <a class="me-3" href="equipment_details.php">
-                                        <img src="../assets/img/icons/eye.svg" alt="View">
-                                    </a>
-                                    <a class="me-3 editDetail" data-bs-toggle="modal" data-bs-target="#editDetailModal" data-id="BE-1005">
-                                        <img src="../assets/img/icons/edit.svg" alt="Edit">
-                                    </a>
-                                </td>
-                            </tr>
+                            <?php
+                            
+                            $query = "SELECT * FROM equipment ORDER BY id DESC";
+                            $result = $conn->query($query);
+                            while ($row = $result->fetch_assoc()) {
+                                echo "<tr>";
+                                echo "<td>" . htmlspecialchars($row['equipment_id']) . "</td>";
+                                echo "<td>" . htmlspecialchars($row['item_name']) . "</td>";
+                                echo "<td>" . htmlspecialchars($row['brand_model']) . "</td>";
+                                echo "<td>" . htmlspecialchars($row['serial_number']) . "</td>";
+                                echo "<td>" . htmlspecialchars($row['category']) . "</td>";
+                                echo "<td>" . htmlspecialchars($row['equipment_condition']) . "</td>";
+                                echo "<td>" . htmlspecialchars($row['status']) . "</td>";
+                                echo "<td>" . htmlspecialchars($row['location']) . "</td>";
+                                echo "<td>" . htmlspecialchars($row['last_maintenance']) . "</td>";
+                                echo "<td>" . htmlspecialchars($row['rental_value']) . "</td>";
+                                echo "</tr>";
+                            }
+                            ?>
                         </tbody>
                     </table>
 
@@ -306,5 +276,78 @@
         </div>
     </div>
 </div>
+
+<script>
+    $('#addProductForm').on('submit', function(e) {
+        e.preventDefault();
+        var equipmentId = $('#equipmentId').val();
+        var itemName = $('#itemName').val();
+        var brandModel = $('#brandModel').val();
+        var serialNumber = $('#serialNumber').val();
+        var category = $('#category').val();
+        var condition = $('#condition').val();
+        var status = $('#status').val();
+        var location = $('#location').val();
+        var lastMaintenance = $('#lastMaintenance').val();
+        var rentalValue = $('#rentalValue').val();
+
+        $.ajax({
+            url: '../process/addEquipment.php',
+            type: 'POST',
+            data: {
+                equipmentId: equipmentId,
+                itemName: itemName,
+                brandModel: brandModel,
+                serialNumber: serialNumber,
+                category: category,
+                condition: condition,
+                status: status,
+                location: location,
+                lastMaintenance: lastMaintenance,
+                rentalValue: rentalValue
+            },
+            success: function(response) {
+                if (response == 'success') {
+                    alert('Equipment added successfully');
+                    location.reload();
+                } else {
+                    alert('Failed to add equipment');
+                }
+            }
+        });
+    });
+
+    $('#addStoreForm').on('submit', function(e) {
+        e.preventDefault();
+        var storeName = $('#storeName').val();
+        var storeAddress = $('#storeAddress').val();
+        var storeContact = $('#storeContact').val();
+        var storePhone = $('#storePhone').val();
+        var storeLocation = $('#storeLocation').val();
+
+        $.ajax({
+            url: '../process/addStore.php',
+            type: 'POST',
+            data: {
+                storeName: storeName,
+                storeAddress: storeAddress,
+                storeContact: storeContact,
+                storePhone: storePhone,
+                storeLocation: storeLocation
+            },
+            success: function(response) {
+                if (response == 'success') {
+                    alert('Store added successfully');
+                    location.reload();
+                } else {
+                    alert('Failed to add store');
+                }
+            }
+        });
+    });
+
+
+
+</script>
 
 <?php include 'includes/footer.php'; ?>

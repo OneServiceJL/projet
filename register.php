@@ -1,3 +1,72 @@
+<?php
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Include your database connection
+    require_once 'config/config.php';
+
+    // Get and sanitize POST data
+    $name = trim($_POST['name']);
+    $post_name = trim($_POST['post_name']);
+    $email = trim($_POST['email']);
+    $phone = trim($_POST['phone']);
+    $address = trim($_POST['address']);
+    $id_number = trim($_POST['id_number']);
+    $dob = $_POST['dob'];
+    $password = $_POST['password'];
+    $confirm_password = $_POST['password']; // If you use a different name for confirm, change this
+
+    // Validate password match
+    if ($password !== $confirm_password) {
+        die('Passwords do not match.');
+    }
+
+    // Generate username
+    $username = strtolower($name . '.' . $post_name);
+
+    // Hash password
+    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
+    // Handle image upload
+    $image_name = $_FILES['image']['name'];
+    $image_tmp = $_FILES['image']['tmp_name'];
+    $image_folder = 'uploads/';
+    if (!file_exists($image_folder)) {
+        mkdir($image_folder, 0777, true);
+    }
+    $image_path = $image_folder . basename($image_name);
+    move_uploaded_file($image_tmp, $image_path);
+
+    // Prepare SQL
+    $sql = "INSERT INTO users (username, password, name, post_name, email, phone, address, id_number, image, dob)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
+
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param(
+        "ssssssssss",
+        $username,
+        $hashed_password,
+        $name,
+        $post_name,
+        $email,
+        $phone,
+        $address,
+        $id_number,
+        $image_path,
+        $dob
+    );
+
+    if ($stmt->execute()) {
+        echo "Registration successful!";
+        // Redirect or show success message
+    } else {
+        echo "Error: " . $stmt->error;
+    }
+
+    $stmt->close();
+    $conn->close();
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,7 +77,7 @@
     <meta name="keywords" content="admin, estimates, bootstrap, business, corporate, creative, invoice, html5, responsive, Projects">
     <meta name="author" content="Dreamguys - Bootstrap Admin Template">
     <meta name="robots" content="noindex, nofollow">
-    <title>Register - Pos admin template</title>
+    <title>TOP 5 SAI MANAGMENT SYSTEM</title>
 
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/fevicon.png">
 
@@ -32,7 +101,7 @@
                             <div class="col-md-12 col-lg-12 d-flex align-items-center">
                                 <div class="card-body p-2 p-lg-3 text-black">
 
-                                    <form action="register_process.php" method="post" enctype="multipart/form-data">
+                                    <form action="register.php" method="post" enctype="multipart/form-data">
 
                                         <div class="d-flex align-items-center mb-2 pb-1">
                                             <img src="assets/images/fevicon.png" class="img-fluid" width="100" alt="POS - Bootstrap Admin Template">
@@ -40,21 +109,6 @@
                                         </div>
 
                                         <h5 class="fw-normal mb-2 pb-2" style="letter-spacing: 1px;">Register for an account</h5>
-
-                                        <div data-mdb-input-init class="form-outline mb-3">
-                                            <input type="text" name="username" id="form2Example17" class="form-control form-control-sm" required />
-                                            <label class="form-label" for="form2Example17">Username</label>
-                                        </div>
-
-                                        <div data-mdb-input-init class="form-outline mb-3">
-                                            <input type="password" name="password" id="form2Example27" class="form-control form-control-sm" required />
-                                            <label class="form-label" for="form2Example27">Password</label>
-                                        </div>
-
-                                        <div data-mdb-input-init class="form-outline mb-3">
-                                            <input type="text" name="full_name" id="form2Example27" class="form-control form-control-sm" />
-                                            <label class="form-label" for="form2Example27">Full Name</label>
-                                        </div>
 
                                         <div data-mdb-input-init class="form-outline mb-3">
                                             <input type="text" name="name" id="form2Example27" class="form-control form-control-sm" required />
@@ -65,6 +119,22 @@
                                             <input type="text" name="post_name" id="form2Example27" class="form-control form-control-sm" required />
                                             <label class="form-label" for="form2Example27">Post Name</label>
                                         </div>
+
+                                        <div data-mdb-input-init class="form-outline mb-3">
+                                            <input type="text" id="username_display" class="form-control form-control-sm" disabled />
+                                            <label class="form-label" for="username_display">Username (auto-generated)</label>
+                                        </div>
+
+                                        <div data-mdb-input-init class="form-outline mb-3">
+                                            <input type="password" name="password" id="form2Example27" class="form-control form-control-sm" required />
+                                            <label class="form-label" for="form2Example27">Password</label>
+                                        </div>
+
+                                        <div data-mdb-input-init class="form-outline mb-3">
+                                            <input type="password" name="password" id="form2Example27" class="form-control form-control-sm" required />
+                                            <label class="form-label" for="form2Example27">Confirm Password</label>
+                                        </div>
+
 
                                         <div data-mdb-input-init class="form-outline mb-3">
                                             <input type="email" name="email" id="form2Example27" class="form-control form-control-sm" required />
@@ -97,7 +167,7 @@
                                         </div>
                                         
                                         <div class="pt-1 mb-4">
-                                            <button data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-sm btn-block" type="submit">Register</button>
+                                            <button data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-sm btn-block" type="submit" onclick="this.form.action='login.php';">Register</button>
                                         </div>
 
                                     </form>
@@ -119,6 +189,18 @@
 
     <script src="assets/js/script.js"></script>
 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    function updateUsername() {
+        var name = document.querySelector('input[name="name"]').value.trim().toLowerCase();
+        var postName = document.querySelector('input[name="post_name"]').value.trim().toLowerCase();
+        var username = name && postName ? name + '.' + postName : '';
+        document.getElementById('username_display').value = username;
+    }
+    document.querySelector('input[name="name"]').addEventListener('input', updateUsername);
+    document.querySelector('input[name="post_name"]').addEventListener('input', updateUsername);
+});
+</script>
 </body>
 
 </html>
