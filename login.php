@@ -51,18 +51,15 @@
                                             <label class="form-label" for="form2Example27">Password</label>
                                         </div>
 
-                                        <div class="pt-1 mb-4">
+                                        <div class="pt-1 mb-4 d-flex justify-content-between">
                                             <button data-mdb-button-init data-mdb-ripple-init href="index.php" class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
+                                            <button class="btn btn-danger btn-sml" type="button" href="register.php">Register here</button>
                                         </div>
 
                                         <a class="small text-muted" href="#!">Forgot password?</a>
-                                        <p class="mb-5 pb-lg-2" style="color: #393f81;">Don't have an account? <a href="register.php"
-                                                style="color: #393f81;">
-                                                <button class="btn btn-outline-primary btn-sm" type="button">Register here</button></a></p>
                                         <a href="#!" class="small text-muted">Terms of use.</a>
                                         <a href="#!" class="small text-muted">Privacy policy</a>
                                     </form>
-
                                 </div>
                             </div>
                         </div>
