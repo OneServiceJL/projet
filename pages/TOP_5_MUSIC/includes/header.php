@@ -8,7 +8,7 @@
     <meta name="keywords" content="admin, estimates, bootstrap, business, corporate, creative, invoice, html5, responsive, Projects">
     <meta name="author" content="Dreamguys - Bootstrap Admin Template">
     <meta name="robots" content="noindex, nofollow">
-    <title>Dreams Pos admin template</title>
+    <title>TOP 5 SAI GROUP</title>
 
     <link rel="shortcut icon" type="image/x-icon" href="../../assets/images/Fevicon.png">
 

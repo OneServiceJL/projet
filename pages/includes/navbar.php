@@ -201,6 +201,6 @@
           <div class="dropdown-menu dropdown-menu-right">
             <a class="dropdown-item" href="profile.html">My Profile</a>
             <a class="dropdown-item" href="generalsettings.html">Settings</a>
-            <a class="dropdown-item" href="signin.html">Logout</a>
+            <a class="dropdown-item" href="login.php">Logout</a>
           </div>
         </div>

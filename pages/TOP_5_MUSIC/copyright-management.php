@@ -4,7 +4,7 @@
     <div class="container-fluid">
         <div class="page-header">
             <div class="page-title">
-                <h4>Copyright Management</h4>
+                <h4>TOP 5 SAI Copyright Management</h4>
                 <h6>Manage your copyright claims and royalties</h6>
             </div>
         </div>
@@ -41,6 +41,11 @@
                                 <label for="exampleInputPassword1" class="form-label">Royalties</label>
                                 <input type="number" class="form-control" id="exampleInputPassword1">
                             </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Upload MP3 File</label>
+                                <input type="file" class="form-control" id="exampleInputPassword1" accept=".mp3">
+                            </div>
+
                         </form>
                     </div>
                     <div class="modal-footer">
@@ -66,6 +71,9 @@
                                     <th scope="col">Label</th>
                                     <th scope="col">Copyright Date</th>
                                     <th scope="col">Royalties</th>
+                                    <th scope="col">Audio</th>
+                                    <th scope="col"> </th>
+
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -75,6 +83,11 @@
                                     <td>Atlantic Records</td>
                                     <td>1971</td>
                                     <td>4.5%</td>
+                                    <td>
+                                        <button class="btn btn-sm btn-outline-primary">
+                                            <i class="fas fa-play"></i>
+                                        </button>
+                                    </td>
                                 </tr>
                                 <tr>
                                     <td>Imagine</td>
@@ -82,14 +95,24 @@
                                     <td>Capitol Records</td>
                                     <td>1971</td>
                                     <td>6.5%</td>
-                                </tr>
+                                    <td>
+                                        <button class="btn btn-sm btn-outline-primary">
+                                            <i class="fas fa-play"></i>
+                                        </button>
+                                    </td>
+                                    </tr>
                                 <tr>
                                     <td>Bohemian Rhapsody</td>
                                     <td>Queen</td>
                                     <td>EMI Records</td>
                                     <td>1975</td>
                                     <td>5.5%</td>
-                                </tr>
+                                    <td>
+                                        <button class="btn btn-sm btn-outline-primary">
+                                            <i class="fas fa-play"></i>
+                                        </button>
+                                    </td>
+                                    </tr>
                                 </tbody>
                             </table>
                         </div>
