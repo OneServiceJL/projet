@@ -8,10 +8,10 @@
                 <div class="searchinputs">
                   <input type="text" placeholder="Search Here ..." />
                   <div class="search-addon">
-                    <span><img src="../../../assets/img/icons/closes.svg" alt="img" /></span>
+                    <span><img src="../../assets/img/icons/closes.svg" alt="img" /></span>
                   </div>
                 </div>
-                <a class="btn" id="searchdiv"><img src="../../../assets/img/icons/search.svg" alt="img" /></a>
+                <a class="btn" id="searchdiv"><img src="../../assets/img/icons/search.svg" alt="img" /></a>
               </form>
             </div>
           </li>
@@ -22,20 +22,20 @@
               data-bs-toggle="dropdown"
               href="javascript:void(0);"
               role="button">
-              <img src="../../../assets/img/flags/us1.png" alt="" height="20" />
+              <img src="../../assets/img/flags/us1.png" alt="" height="20" />
             </a>
             <div class="dropdown-menu dropdown-menu-right">
               <a href="javascript:void(0);" class="dropdown-item">
-                <img src="../../../assets/img/flags/us.png" alt="" height="16" /> English
+                <img src="../../assets/img/flags/us.png" alt="" height="16" /> English
               </a>
               <a href="javascript:void(0);" class="dropdown-item">
-                <img src="../../../assets/img/flags/fr.png" alt="" height="16" /> French
+                <img src="../../assets/img/flags/fr.png" alt="" height="16" /> French
               </a>
               <a href="javascript:void(0);" class="dropdown-item">
-                <img src="../../../assets/img/flags/es.png" alt="" height="16" /> Spanish
+                <img src="../../assets/img/flags/es.png" alt="" height="16" /> Spanish
               </a>
               <a href="javascript:void(0);" class="dropdown-item">
-                <img src="../../../assets/img/flags/de.png" alt="" height="16" /> German
+                <img src="../../assets/img/flags/de.png" alt="" height="16" /> German
               </a>
             </div>
           </li>
@@ -45,7 +45,7 @@
               href="javascript:void(0);"
               class="dropdown-toggle nav-link"
               data-bs-toggle="dropdown">
-              <img src="../../../assets/img/icons/notification-bing.svg" alt="img" />
+              <img src="../../assets/img/icons/notification-bing.svg" alt="img" />
               <span class="badge rounded-pill">4</span>
             </a>
             <div class="dropdown-menu notifications">
@@ -59,7 +59,7 @@
                     <a href="activities.html">
                       <div class="media d-flex">
                         <span class="avatar flex-shrink-0">
-                          <img alt="" src="../../../assets/img/profiles/avatar-02.jpg" />
+                          <img alt="" src="../../assets/img/profiles/avatar-02.jpg" />
                         </span>
                         <div class="media-body flex-grow-1">
                           <p class="noti-details">
@@ -78,7 +78,7 @@
                     <a href="activities.html">
                       <div class="media d-flex">
                         <span class="avatar flex-shrink-0">
-                          <img alt="" src="../../../assets/img/profiles/avatar-03.jpg" />
+                          <img alt="" src="../../assets/img/profiles/avatar-03.jpg" />
                         </span>
                         <div class="media-body flex-grow-1">
                           <p class="noti-details">
@@ -97,7 +97,7 @@
                     <a href="activities.html">
                       <div class="media d-flex">
                         <span class="avatar flex-shrink-0">
-                          <img alt="" src="../../../assets/img/profiles/avatar-06.jpg" />
+                          <img alt="" src="../../assets/img/profiles/avatar-06.jpg" />
                         </span>
                         <div class="media-body flex-grow-1">
                           <p class="noti-details">
@@ -118,7 +118,7 @@
                     <a href="activities.html">
                       <div class="media d-flex">
                         <span class="avatar flex-shrink-0">
-                          <img alt="" src="../../../assets/img/profiles/avatar-17.jpg" />
+                          <img alt="" src="../../assets/img/profiles/avatar-17.jpg" />
                         </span>
                         <div class="media-body flex-grow-1">
                           <p class="noti-details">
@@ -137,7 +137,7 @@
                     <a href="activities.html">
                       <div class="media d-flex">
                         <span class="avatar flex-shrink-0">
-                          <img alt="" src="../../../assets/img/profiles/avatar-13.jpg" />
+                          <img alt="" src="../../assets/img/profiles/avatar-13.jpg" />
                         </span>
                         <div class="media-body flex-grow-1">
                           <p class="noti-details">
@@ -165,13 +165,13 @@
               href="javascript:void(0);"
               class="dropdown-toggle nav-link userset"
               data-bs-toggle="dropdown">
-              <span class="user-img"><img src="../../../assets/img/profiles/avator1.jpg" alt="" />
+              <span class="user-img"><img src="../../assets/img/profiles/avator1.jpg" alt="" />
                 <span class="status online"></span></span>
             </a>
             <div class="dropdown-menu menu-drop-user">
               <div class="profilename">
                 <div class="profileset">
-                  <span class="user-img"><img src="../../../assets/img/profiles/avator1.jpg" alt="" />
+                  <span class="user-img"><img src="../../assets/img/profiles/avator1.jpg" alt="" />
                     <span class="status online"></span></span>
                   <div class="profilesets">
                     <h6>John Doe</h6>
@@ -184,7 +184,7 @@
                 <a class="dropdown-item" href="generalsettings.html"><i class="me-2" data-feather="settings"></i>Settings</a>
                 <hr class="m-0" />
                 <a class="dropdown-item logout pb-0" href="signin.html"><img
-                    src="../../../assets/img/icons/log-out.svg"
+                    src="../../assets/img/icons/log-out.svg"
                     class="me-2"
                     alt="img" />Logout</a>
               </div>

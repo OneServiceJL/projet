@@ -10,20 +10,20 @@
     <meta name="robots" content="noindex, nofollow">
     <title>Dreams Pos admin template</title>
 
-    <link rel="shortcut icon" type="image/x-icon" href="../../../assets/images/Fevicon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="../../assets/images/Fevicon.png">
 
-    <link rel="stylesheet" href="../../../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/css/bootstrap.min.css">
 
-    <link rel="stylesheet" href="../../../assets/css/animate.css">
+    <link rel="stylesheet" href="../../assets/css/animate.css">
 
-    <link rel="stylesheet" href="../../../assets/plugins/select2/css/select2.min.css">
+    <link rel="stylesheet" href="../../assets/plugins/select2/css/select2.min.css">
 
-    <link rel="stylesheet" href="../../../assets/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="../../assets/css/dataTables.bootstrap4.min.css">
 
-    <link rel="stylesheet" href="../../../assets/plugins/fontawesome/css/fontawesome.min.css">
-    <link rel="stylesheet" href="../../../assets/plugins/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../../assets/plugins/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="../../assets/plugins/fontawesome/css/all.min.css">
 
-    <link rel="stylesheet" href="../../../assets/css/style.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
 
 <body>
@@ -37,10 +37,10 @@
 
             <div class="header-left active">
                 <a href="index.php" class="logo">
-                    <img src="../../../assets/images/TOP 5 SAI logo OG.jpg" alt="" />
+                    <img src="../../assets/images/TOP 5 SAI logo OG.jpg" alt="" />
                 </a>
                 <a href="index.php" class="logo-small">
-                    <img src="../../../assets/images/TOP 5 SAI logo OG.jpg" alt="" />
+                    <img src="../../assets/images/TOP 5 SAI logo OG.jpg" alt="" />
                 </a>
                 <a id="toggle_btn" href="javascript:void(0);">
                 </a>

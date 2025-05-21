@@ -9,6 +9,7 @@
             </div>
         </div>
         <!-- Add Beat Modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addBeatModal">Add New Beat</button>
         <div class="modal fade" id="addBeatModal" tabindex="-1" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
@@ -34,6 +35,7 @@
                                     <option value="Rap">Rap</option>
                                     <option value="RnB">RnB</option>
                                     <option value="Pop">Pop</option>
+                                    <option value="other">Other</option>
                                 </select>
                             </div>
                             <div class="form-group">
@@ -43,6 +45,10 @@
                             <div class="form-group">
                                 <label for="newBeatDuration">Beat Duration</label>
                                 <input type="text" class="form-control" id="newBeatDuration" placeholder="Beat duration">
+                            </div>
+                            <div class="form-group">
+                                <label for="newBeatUpload">Upload Beat</label>
+                                <input type="file" class="form-control" id="newBeatUpload" accept=".mp3">
                             </div>
                         </form>
                     </div>
