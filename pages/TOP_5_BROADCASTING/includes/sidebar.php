@@ -32,10 +32,10 @@
                                 <span class="menu-arrow"></span>
                             </a>
                             <ul>
-                                <li><a href="TOP_5_MUSIC/artist-discovery.php">Découverte d'artistes</a></li>
-                                <li><a href="TOP_5_MUSIC/artist-development.php">Développement artistique</a></li>
-                                <li><a href="TOP_5_MUSIC/artist-database.php">Base données artistes</a></li>
-                                <li><a href="TOP_5_MUSIC/production-calendar.php">Calendrier de productions</a></li>
+                                <li><a href="artist-discovery.php">Découverte d'artistes</a></li>
+                                <li><a href="artist-development.php">Développement artistique</a></li>
+                                <li><a href="artist-database.php">Base données artistes</a></li>
+                                <li><a href="production-calendar.php">Calendrier de productions</a></li>
                             </ul>
                         </li>
 
@@ -47,10 +47,10 @@
                                 <span class="menu-arrow"></span>
                             </a>
                             <ul>
-                                <li><a href="TOP_5_MUSIC/studio-bookings.php">Réservation studio</a></li>
-                                <li><a href="TOP_5_MUSIC/recording-sessions.php">Sessions d'enregistrement</a></li>
-                                <li><a href="TOP_5_MUSIC/beat-library.php">Librairie de beats</a></li>
-                                <li><a href="TOP_5_MUSIC/copyright-management.php">Gestion des droits</a></li>
+                                <li><a href="studio-bookings.php">Réservation studio</a></li>
+                                <li><a href="recording-sessions.php">Sessions d'enregistrement</a></li>
+                                <li><a href="beat-library.php">Librairie de beats</a></li>
+                                <li><a href="copyright-management.php">Gestion des droits</a></li>
                             </ul>
                         </li>
 
@@ -62,10 +62,10 @@
                                 <span class="menu-arrow"></span>
                             </a>
                             <ul>
-                                <li><a href="TOP_5_MUSIC/digital-campaigns.php">Campagnes digitales</a></li>
-                                <li><a href="TOP_5_MUSIC/media-kits.php">Kits médias</a></li>
-                                <li><a href="TOP_5_MUSIC/streaming-analytics.php">Analytics streaming</a></li>
-                                <li><a href="TOP_5_MUSIC/social-media.php">Réseaux sociaux</a></li>
+                                <li><a href="digital-campaigns.php">Campagnes digitales</a></li>
+                                <li><a href="media-kits.php">Kits médias</a></li>
+                                <li><a href="streaming-analytics.php">Analytics streaming</a></li>
+                                <li><a href="social-media.php">Réseaux sociaux</a></li>
                             </ul>
                         </li>
 
@@ -77,10 +77,10 @@
                                 <span class="menu-arrow"></span>
                             </a>
                             <ul>
-                                <li><a href="TOP_5_MUSIC/concert-booking.php">Booking concerts</a></li>
-                                <li><a href="TOP_5_MUSIC/tour-schedule.php">Planning tournées</a></li>
-                                <li><a href="TOP_5_MUSIC/event-budget.php">Budgets événements</a></li>
-                                <li><a href="TOP_5_MUSIC/venue-database.php">Base données salles</a></li>
+                                <li><a href="concert-booking.php">Booking concerts</a></li>
+                                <li><a href="tour-schedule.php">Planning tournées</a></li>
+                                <li><a href="event-budget.php">Budgets événements</a></li>
+                                <li><a href="venue-database.php">Base données salles</a></li>
                             </ul>
                         </li>
 
@@ -92,10 +92,10 @@
                                 <span class="menu-arrow"></span>    
                             </a>
                             <ul>
-                                <li><a href="TOP_5_MUSIC/streaming-optimization.php">Optimisation streaming</a></li>
-                                <li><a href="TOP_5_MUSIC/platform-dashboard.php">Dashboard plateformes</a></li>
-                                <li><a href="TOP_5_MUSIC/seo-management.php">Gestion SEO</a></li>
-                                <li><a href="TOP_5_MUSIC/content-strategy.php">Stratégie de contenu</a></li>
+                                <li><a href="streaming-optimization.php">Optimisation streaming</a></li>
+                                <li><a href="platform-dashboard.php">Dashboard plateformes</a></li>
+                                <li><a href="seo-management.php">Gestion SEO</a></li>
+                                <li><a href="content-strategy.php">Stratégie de contenu</a></li>
                             </ul>
                         </li>
 
@@ -107,9 +107,9 @@
                                 <span class="menu-arrow"></span>
                             </a>
                             <ul>
-                                <li><a href="TOP_5_MUSIC/contracts-management.php">Gestion des contrats</a></li>
-                                <li><a href="TOP_5_MUSIC/royalties-distribution.php">Distribution royalties</a></li>
-                                <li><a href="TOP_5_MUSIC/copyright-disputes.php">Litiges droits d'auteur</a></li>
+                                <li><a href="contracts-management.php">Gestion des contrats</a></li>
+                                <li><a href="royalties-distribution.php">Distribution royalties</a></li>
+                                <li><a href="copyright-disputes.php">Litiges droits d'auteur</a></li>
                             </ul>
                         </li>
 
@@ -121,15 +121,15 @@
                                 <span class="menu-arrow"></span>
                             </a>
                             <ul>
-                                <li><a href="TOP_5_MUSIC/music-trends.php">Trends musicales</a></li>
-                                <li><a href="TOP_5_MUSIC/revenue-reports.php">Rapports revenus</a></li>
-                                <li><a href="TOP_5_MUSIC/fan-demographics.php">Démographie fans</a></li>
-                                <li><a href="TOP_5_MUSIC/success-predictions.php">Prédictions de succès</a></li>
+                                <li><a href="music-trends.php">Trends musicales</a></li>
+                                <li><a href="revenue-reports.php">Rapports revenus</a></li>
+                                <li><a href="fan-demographics.php">Démographie fans</a></li>
+                                <li><a href="success-predictions.php">Prédictions de succès</a></li>
                             </ul>
                         </li>
                     </ul>
                 </li>
-                
+
                 <li class="submenu">
                     <a href="javascript:void(0);">
                         <i class="fa fa-tv" aria-hidden="true"></i>
@@ -137,17 +137,16 @@
                         <span class="menu-arrow"></span>
                     </a>
                     <ul>
-                        <li><a href="../TOP_5_BROADCASTING/programming.php">Département de Programmation</a></li>
-                        <li><a href="../TOP_5_BROADCASTING/technical.php">Département Technique & Ingénierie</a></li>
-                        <li><a href="../TOP_5_BROADCASTING/content.php">Département Contenu & Production</a></li>
-                        <li><a href="../TOP_5_BROADCASTING/regie.php">Département Régie & Direct</a></li>
-                        <li><a href="../TOP_5_BROADCASTING/digital.php">Département Digital & Streaming</a></li>
-                        <li><a href="../TOP_5_BROADCASTING/legal.php">Département Juridique & Droits</a></li>
-                        <li><a href="../TOP_5_BROADCASTING/commercial.php">Département Commercial & Publicité</a></li>
-                        <li><a href="../TOP_5_BROADCASTING/data.php">Département Data & Intelligence Artificielle</a></li>
+                        <li><a href="programming.php">Département de Programmation</a></li>
+                        <li><a href="technical.php">Département Technique & Ingénierie</a></li>
+                        <li><a href="content.php">Département Contenu & Production</a></li>
+                        <li><a href="regie.php">Département Régie & Direct</a></li>
+                        <li><a href="digital.php">Département Digital & Streaming</a></li>
+                        <li><a href="legal.php">Département Juridique & Droits</a></li>
+                        <li><a href="commercial.php">Département Commercial & Publicité</a></li>
+                        <li><a href="data.php">Département Data & Intelligence Artificielle</a></li>
                     </ul>
                 </li>
-                
                 
             </ul>
         </div>

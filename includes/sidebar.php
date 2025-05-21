@@ -130,6 +130,25 @@
                     </ul>
                 </li>
                 
+
+                <!-- Top 5 Broadcasting -->
+                <li class="submenu">
+                    <a href="javascript:void(0);">
+                        <i class="fa fa-tv" aria-hidden="true"></i>
+                        <span>TOP 5 Broadcasting</span>
+                        <span class="menu-arrow"></span>
+                    </a>
+                    <ul>
+                        <li><a href="pages/TOP_5_BROADCASTING/programming.php">Département de Programmation</a></li>
+                        <li><a href="pages/TOP_5_BROADCASTING/technical.php">Département Technique & Ingénierie</a></li>
+                        <li><a href="pages/TOP_5_BROADCASTING/content.php">Département Contenu & Production</a></li>
+                        <li><a href="pages/TOP_5_BROADCASTING/regie.php">Département Régie & Direct</a></li>
+                        <li><a href="pages/TOP_5_BROADCASTING/digital.php">Département Digital & Streaming</a></li>
+                        <li><a href="pages/TOP_5_BROADCASTING/legal.php">Département Juridique & Droits</a></li>
+                        <li><a href="pages/TOP_5_BROADCASTING/commercial.php">Département Commercial & Publicité</a></li>
+                        <li><a href="pages/TOP_5_BROADCASTING/data.php">Département Data & Intelligence Artificielle</a></li>
+                    </ul>
+                </li>
                 
             </ul>
         </div>
