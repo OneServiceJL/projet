@@ -137,14 +137,27 @@
                         <span class="menu-arrow"></span>
                     </a>
                     <ul>
-                        <li><a href="programming.php">Département de Programmation</a></li>
-                        <li><a href="technical.php">Département Technique & Ingénierie</a></li>
-                        <li><a href="content.php">Département Contenu & Production</a></li>
-                        <li><a href="regie.php">Département Régie & Direct</a></li>
-                        <li><a href="digital.php">Département Digital & Streaming</a></li>
-                        <li><a href="legal.php">Département Juridique & Droits</a></li>
-                        <li><a href="commercial.php">Département Commercial & Publicité</a></li>
-                        <li><a href="data.php">Département Data & Intelligence Artificielle</a></li>
+                        <div>
+                            <li><a href="dashboard.php"><i class="fas fa-home"></i>Dashboard</a></li>
+                        </div>
+                        <!-- Département Artistique & A&R -->
+                        <li class="submenu">
+                            <a href="javascript:void(0);">
+                                <i class="fa fa-headphones" aria-hidden="true"></i>
+                                <span>Energy Radio</span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul>
+                                <li><a href="programming.php">Département de Programmation</a></li>
+                                <li><a href="technical.php">Département Technique & Ingénierie</a></li>
+                                <li><a href="content.php">Département Contenu & Production</a></li>
+                                <li><a href="regie.php">Département Régie & Direct</a></li>
+                                <li><a href="digital.php">Département Digital & Streaming</a></li>
+                                <li><a href="legal.php">Département Juridique & Droits</a></li>
+                                <li><a href="commercial.php">Département Commercial & Publicité</a></li>
+                                <li><a href="data.php">Département Data & Intelligence Artificielle</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </li>
                 

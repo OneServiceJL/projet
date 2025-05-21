@@ -34,10 +34,6 @@
       <!-- Page Header -->
       <div class="page-header">
         <div class="page-title">
-          <a href="index.php" class="btn btn-primary">
-            <i class="fas fa-arrow-left"></i>
-            Retour
-          </a>
           <h4>Dashboard</h4>
           <h6>Company Overview and Department Metrics</h6>
         </div>

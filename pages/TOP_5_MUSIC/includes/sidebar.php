@@ -7,12 +7,12 @@
                         <span>Dashboard</span>
                     </a>
                 </li>
-                
+
                 <!-- Company Branches -->
                 <li class="menu-title">
                     <span>Divisions</span>
                 </li>
-                
+
                 <!-- Top 5 Sai (Studio Production) -->
                 <li class="submenu">
                     <a href="javascript:void(0);">
@@ -89,7 +89,7 @@
                             <a href="javascript:void(0);">
                                 <i class="fa fa-digital-tachograph" aria-hidden="true"></i>
                                 <span>Digital & Plateformes</span>
-                                <span class="menu-arrow"></span>    
+                                <span class="menu-arrow"></span>
                             </a>
                             <ul>
                                 <li><a href="streaming-optimization.php">Optimisation streaming</a></li>
@@ -129,8 +129,40 @@
                         </li>
                     </ul>
                 </li>
-                
-                
+
+
+                <!-- Top 5 Broadcasting -->
+                <li class="submenu">
+                    <a href="javascript:void(0);">
+                        <i class="fa fa-tv" aria-hidden="true"></i>
+                        <span>TOP 5 Broadcasting</span>
+                        <span class="menu-arrow"></span>
+                    </a>
+
+                    <ul>
+                        <div>
+                            <li><a href="../TOP_5_BROADCASTING/dashboard.php"><i class="fas fa-home"></i>Dashboard</a></li>
+                        </div>
+                        <!-- Département Artistique & A&R -->
+                        <li class="submenu">
+                            <a href="javascript:void(0);">
+                                <i class="fa fa-headphones" aria-hidden="true"></i>
+                                <span>Energy Radio</span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul>
+                                <li><a href="../TOP_5_BROADCASTING/programming.php">Département de Programmation</a></li>
+                                <li><a href="../TOP_5_BROADCASTING/technical.php">Département Technique & Ingénierie</a></li>
+                                <li><a href="../TOP_5_BROADCASTING/content.php">Département Contenu & Production</a></li>
+                                <li><a href="../TOP_5_BROADCASTING/regie.php">Département Régie & Direct</a></li>
+                                <li><a href="../TOP_5_BROADCASTING/digital.php">Département Digital & Streaming</a></li>
+                                <li><a href="../TOP_5_BROADCASTING/legal.php">Département Juridique & Droits</a></li>
+                                <li><a href="../TOP_5_BROADCASTING/commercial.php">Département Commercial & Publicité</a></li>
+                                <li><a href="../TOP_5_BROADCASTING/data.php">Département Data & Intelligence Artificielle</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
             </ul>
         </div>
     </div>
