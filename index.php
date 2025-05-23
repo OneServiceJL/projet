@@ -155,13 +155,6 @@
 				</li>
 				<!-- /Flag -->
 
-
-				<li class="nav-item nav-item-box">
-					<a href="email.html">
-						<i data-feather="mail"></i>
-						<span class="badge rounded-pill">1</span>
-					</a>
-				</li>
 				<!-- Notifications -->
 				<li class="nav-item dropdown nav-item-box">
 					<a href="javascript:void(0);" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
@@ -264,9 +257,6 @@
 				</li>
 				<!-- /Notifications -->
 
-				<li class="nav-item nav-item-box">
-					<a href="general-settings.html"><i data-feather="settings"></i></a>
-				</li>
 				<li class="nav-item dropdown has-arrow main-drop">
 					<a href="javascript:void(0);" class="dropdown-toggle nav-link userset" data-bs-toggle="dropdown">
 						<span class="user-info">
@@ -392,9 +382,6 @@
 
 		<div class="page-wrapper">
 			<div class="content">
-
-
-
 				<div class="row">
 					<!-- Operations Dropdown -->
 					<div class="col-xl-3 col-sm-6 col-12 d-flex mb-3">
