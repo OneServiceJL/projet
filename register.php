@@ -1,206 +1,398 @@
-<?php
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Include your database connection
-    require_once 'config/config.php';
-
-    // Get and sanitize POST data
-    $name = trim($_POST['name']);
-    $post_name = trim($_POST['post_name']);
-    $email = trim($_POST['email']);
-    $phone = trim($_POST['phone']);
-    $address = trim($_POST['address']);
-    $id_number = trim($_POST['id_number']);
-    $dob = $_POST['dob'];
-    $password = $_POST['password'];
-    $confirm_password = $_POST['password']; // If you use a different name for confirm, change this
-
-    // Validate password match
-    if ($password !== $confirm_password) {
-        die('Passwords do not match.');
-    }
-
-    // Generate username
-    $username = strtolower($name . '.' . $post_name);
-
-    // Hash password
-    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-
-    // Handle image upload
-    $image_name = $_FILES['image']['name'];
-    $image_tmp = $_FILES['image']['tmp_name'];
-    $image_folder = 'uploads/';
-    if (!file_exists($image_folder)) {
-        mkdir($image_folder, 0777, true);
-    }
-    $image_path = $image_folder . basename($image_name);
-    move_uploaded_file($image_tmp, $image_path);
-
-    // Prepare SQL
-    $sql = "INSERT INTO users (username, password, name, post_name, email, phone, address, id_number, image, dob)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)";
-
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param(
-        "ssssssssss",
-        $username,
-        $hashed_password,
-        $name,
-        $post_name,
-        $email,
-        $phone,
-        $address,
-        $id_number,
-        $image_path,
-        $dob
-    );
-
-    if ($stmt->execute()) {
-        echo "Registration successful!";
-        // Redirect or show success message
-    } else {
-        echo "Error: " . $stmt->error;
-    }
-
-    $stmt->close();
-    $conn->close();
-}
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+        <meta name="description" content="POS - Bootstrap Admin Template">
+		<meta name="keywords" content="admin, estimates, bootstrap, business, corporate, creative, invoice, html5, responsive, Projects">
+        <meta name="author" content="Dreamguys - Bootstrap Admin Template">
+        <meta name="robots" content="noindex, nofollow">
+        <title>Register</title>
+		
+		<!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="assets/images/fevicon.png">
+		
+		<!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+		
+        <!-- Fontawesome CSS -->
+		<link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
+		<link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
+		
+		<!-- Main CSS -->
+        <link rel="stylesheet" href="assets/css/style.css">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-    <meta name="description" content="POS - Bootstrap Admin Template">
-    <meta name="keywords" content="admin, estimates, bootstrap, business, corporate, creative, invoice, html5, responsive, Projects">
-    <meta name="author" content="Dreamguys - Bootstrap Admin Template">
-    <meta name="robots" content="noindex, nofollow">
-    <title>TOP 5 SAI MANAGMENT SYSTEM</title>
+        <!-- Custom CSS -->
+    <style>
+        body{
+            background-color:rgb(94, 67, 247);
+            background-image:url("assets/images/bg_login.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+        .step-indicator {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+        .step {
+            text-align: center;
+            position: relative;
+            flex: 1;
+        }
+        .step-number {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #e9ecef;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 10px;
+            font-weight: bold;
+        }
+        .step.active .step-number {
+            background-color: #0d6efd;
+            color: white;
+        }
+        .step.completed .step-number {
+            background-color: #198754;
+            color: white;
+        }
+        .step-title {
+            font-size: 14px;
+            color: #6c757d;
+        }
+        .step.active .step-title {
+            color: #0d6efd;
+            font-weight: bold;
+        }
+        .step.completed .step-title {
+            color: #198754;
+        }
+        .step:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 60%;
+            width: 80%;
+            height: 2px;
+            background-color: #e9ecef;
+            z-index: -1;
+        }
+        .step.active:not(:last-child)::after {
+            background-color: #e9ecef;
+        }
+        .step.completed:not(:last-child)::after {
+            background-color: #198754;
+        }
+        .form-step {
+            display: none;
+        }
+        .form-step.active {
+            display: block;
+        }
+    </style>
+		
+    </head>
+    <body>
 
-    <link rel="shortcut icon" type="image/x-icon" href="assets/images/fevicon.png">
-
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-
-    <link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
-    <link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
-
-    <link rel="stylesheet" href="assets/css/style.css">
-
-</head>
-
-<body>
-
-    <section class="vh-100" style="background-color:rgb(61, 225, 236);">
-        <div class="container py-5 h-100">
-            <div class="row d-flex justify-content-center align-items-center h-100">
-                <div class="col col-xl-10">
-                    <div class="card" style="border-radius: 1rem;">
-                        <div class="row g-0">
-                            <div class="col-md-12 col-lg-12 d-flex align-items-center">
-                                <div class="card-body p-2 p-lg-3 text-black">
-
-                                    <form action="register.php" method="post" enctype="multipart/form-data">
-
-                                        <div class="d-flex align-items-center mb-2 pb-1">
-                                            <img src="assets/images/fevicon.png" class="img-fluid" width="100" alt="POS - Bootstrap Admin Template">
-                                            <span class="h3 fw-bold mb-0">TOP 5 SAI</br>MANAGMENT SYSTEM</span>
-                                        </div>
-
-                                        <h5 class="fw-normal mb-2 pb-2" style="letter-spacing: 1px;">Register for an account</h5>
-
-                                        <div data-mdb-input-init class="form-outline mb-3">
-                                            <input type="text" name="name" id="form2Example27" class="form-control form-control-sm" required />
-                                            <label class="form-label" for="form2Example27">Name</label>
-                                        </div>
-
-                                        <div data-mdb-input-init class="form-outline mb-3">
-                                            <input type="text" name="post_name" id="form2Example27" class="form-control form-control-sm" required />
-                                            <label class="form-label" for="form2Example27">Post Name</label>
-                                        </div>
-
-                                        <div data-mdb-input-init class="form-outline mb-3">
-                                            <input type="text" id="username_display" class="form-control form-control-sm" disabled />
-                                            <label class="form-label" for="username_display">Username (auto-generated)</label>
-                                        </div>
-
-                                        <div data-mdb-input-init class="form-outline mb-3">
-                                            <input type="password" name="password" id="form2Example27" class="form-control form-control-sm" required />
-                                            <label class="form-label" for="form2Example27">Password</label>
-                                        </div>
-
-                                        <div data-mdb-input-init class="form-outline mb-3">
-                                            <input type="password" name="password" id="form2Example27" class="form-control form-control-sm" required />
-                                            <label class="form-label" for="form2Example27">Confirm Password</label>
-                                        </div>
-
-
-                                        <div data-mdb-input-init class="form-outline mb-3">
-                                            <input type="email" name="email" id="form2Example27" class="form-control form-control-sm" required />
-                                            <label class="form-label" for="form2Example27">Email</label>
-                                        </div>
-
-                                        <div data-mdb-input-init class="form-outline mb-3">
-                                            <input type="tel" name="phone" id="form2Example27" class="form-control form-control-sm" required />
-                                            <label class="form-label" for="form2Example27">Phone</label>
-                                        </div>
-
-                                        <div data-mdb-input-init class="form-outline mb-3">
-                                            <input type="text" name="address" id="form2Example27" class="form-control form-control-sm" required />
-                                            <label class="form-label" for="form2Example27">Address</label>
-                                        </div>
-
-                                        <div data-mdb-input-init class="form-outline mb-3">
-                                            <input type="text" name="id_number" id="form2Example27" class="form-control form-control-sm" required />
-                                            <label class="form-label" for="form2Example27">ID Number</label>
-                                        </div>
-
-                                        <div data-mdb-input-init class="form-outline mb-3">
-                                            <input type="file" name="image" id="form2Example27" class="form-control form-control-sm" required />
-                                            <label class="form-label" for="form2Example27">Upload Photo</label>
-                                        </div>
-
-                                        <div data-mdb-input-init class="form-outline mb-3">
-                                            <input type="date" name="dob" id="form2Example27" class="form-control form-control-sm" required />
-                                            <label class="form-label" for="form2Example27">Date of Birth</label>
-                                        </div>
-                                        
-                                        <div class="pt-1 mb-4">
-                                            <button data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-sm btn-block" type="submit" onclick="this.form.action='login.php';">Register</button>
-                                        </div>
-
-                                    </form>
-
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card shadow"> <!-- Added card shadow for better visual hierarchy -->
+                        <div class="card-header bg-primary text-white"> <!-- Added card header -->
+                            <h4 class="mb-0">Registration Form</h4>
+                        </div>
+                        <div class="card-body">
+                            <!-- Step Indicator - moved outside the form -->
+                            <div class="step-indicator">
+                                <div class="step active" data-step="1">
+                                    <div class="step-number">1</div>
+                                    <div class="step-title">Personal Info</div>
+                                </div>
+                                <div class="step" data-step="2">
+                                    <div class="step-number">2</div>
+                                    <div class="step-title">Contact Info</div>
+                                </div>
+                                <div class="step" data-step="3">
+                                    <div class="step-number">3</div>
+                                    <div class="step-title">Account Setup</div>
+                                </div>
+                                <div class="step" data-step="4">
+                                    <div class="step-number">4</div>
+                                    <div class="step-title">Confirmation</div>
                                 </div>
                             </div>
+                            
+                            <!-- Form Steps -->
+                            <form id="registrationForm">
+                                <!-- Step 1 -->
+                                <div class="form-step active" data-step="1">
+                                    <h5 class="mb-4">Personal Information</h5>
+                                    <div class="row">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="firstName" class="form-label">First Name</label>
+                                            <input type="text" class="form-control" id="firstName" required>
+                                        </div>
+                                        <div class="col-md-6 mb-3">
+                                            <label for="lastName" class="form-label">Last Name</label>
+                                            <input type="text" class="form-control" id="lastName" required>
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="gender" class="form-label">Gender</label>
+                                        <select class="form-select" id="gender" required>
+                                            <option value="" selected disabled>Select gender</option>
+                                            <option value="male">Male</option>
+                                            <option value="female">Female</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="dob" class="form-label">Date of Birth</label>
+                                        <input type="date" class="form-control" id="dob" required>
+                                    </div>
+                                    <div class="d-flex justify-content-end">
+                                        <button type="button" class="btn btn-primary next-step">Next</button>
+                                    </div>
+                                </div>
+                                
+                                <!-- Step 2 -->
+                                <div class="form-step" data-step="2">
+                                    <h5 class="mb-4">Contact Information</h5>
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">Email Address</label>
+                                        <input type="email" class="form-control" id="email" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="phone" class="form-label">Phone Number</label>
+                                        <input type="tel" class="form-control" id="phone" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="address" class="form-label">Address</label>
+                                        <textarea class="form-control" id="address" rows="3" required></textarea>
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        <button type="button" class="btn btn-secondary prev-step">Previous</button>
+                                        <button type="button" class="btn btn-primary next-step">Next</button>
+                                    </div>
+                                </div>
+                                
+                                <!-- Step 3 -->
+                                <div class="form-step" data-step="3">
+                                    <h5 class="mb-4">Account Setup</h5>
+                                    <div class="mb-3">
+                                        <label for="username" class="form-label">Username</label>
+                                        <input type="text" class="form-control" id="username" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="password" class="form-label">Password</label>
+                                        <input type="password" class="form-control" id="password" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="confirmPassword" class="form-label">Confirm Password</label>
+                                        <input type="password" class="form-control" id="confirmPassword" required>
+                                    </div>
+                                    <div class="mb-3 form-check">
+                                        <input type="checkbox" class="form-check-input" id="terms" required>
+                                        <label class="form-check-label" for="terms">I agree to the terms and conditions</label>
+                                    </div>
+                                    <div class="d-flex justify-content-between">
+                                        <button type="button" class="btn btn-secondary prev-step">Previous</button>
+                                        <button type="button" class="btn btn-primary next-step">Next</button>
+                                    </div>
+                                </div>
+                                
+                                <!-- Step 4 -->
+                                <div class="form-step" data-step="4">
+                                    <h5 class="mb-4">Confirmation</h5>
+                                    <div class="alert alert-info">
+                                        <p>Please review your information before submitting.</p>
+                                    </div>
+                                    <div class="card mb-4">
+                                        <div class="card-header">
+                                            <h6>Personal Information</h6>
+                                        </div>
+                                        <div class="card-body">
+                                            <p><strong>Name:</strong> <span id="review-name"></span></p>
+                                            <p><strong>Gender:</strong> <span id="review-gender"></span></p>
+                                            <p><strong>Date of Birth:</strong> <span id="review-dob"></span></p>
+                                        </div>
+                                    </div>
+                                    <div class="card mb-4">
+                                        <div class="card-header">
+                                            <h6>Contact Information</h6>
+                                        </div>
+                                        <div class="card-body">
+                                            <p><strong>Email:</strong> <span id="review-email"></span></p>
+                                            <p><strong>Phone:</strong> <span id="review-phone"></span></p>
+                                            <p><strong>Address:</strong> <span id="review-address"></span></p>
+                                        </div>
+                                    </div>
+                                    <div class="card mb-4">
+                                        <div class="card-header">
+                                            <h6>Account Information</h6>
+                                        </div>
+                                        <div class="card-body">
+                                            <p><strong>Username:</strong> <span id="review-username"></span></p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="d-flex justify-content-between">
+                                        <button type="button" class="btn btn-secondary prev-step">Previous</button>
+                                        <button type="submit" class="btn btn-success">Submit</button>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    
+		<!-- /Main Wrapper -->
+        <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('registrationForm');
+            const steps = document.querySelectorAll('.step');
+            const formSteps = document.querySelectorAll('.form-step');
+            const nextButtons = document.querySelectorAll('.next-step');
+            const prevButtons = document.querySelectorAll('.prev-step');
+            let currentStep = 1;
+            
+            // Next button click handler
+            nextButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Validate current step before proceeding
+                    if (validateStep(currentStep)) {
+                        goToStep(currentStep + 1);
+                    }
+                });
+            });
+            
+            // Previous button click handler
+            prevButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    goToStep(currentStep - 1);
+                });
+            });
+            
+            // Form submission handler
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                // Here you would typically send the form data to the server
+                alert('Form submitted successfully!');
+                // Reset form and go to step 1
+                form.reset();
+                goToStep(1);
+            });
+            
+            function goToStep(step) {
+                // Update current step
+                currentStep = step;
+                
+                // Update step indicator
+                steps.forEach((stepElement, index) => {
+                    if (index + 1 === currentStep) {
+                        stepElement.classList.add('active');
+                        stepElement.classList.remove('completed');
+                    } else if (index + 1 < currentStep) {
+                        stepElement.classList.remove('active');
+                        stepElement.classList.add('completed');
+                    } else {
+                        stepElement.classList.remove('active', 'completed');
+                    }
+                });
+                
+                // Show/hide form steps
+                formSteps.forEach(formStep => {
+                    if (parseInt(formStep.dataset.step) === currentStep) {
+                        formStep.classList.add('active');
+                    } else {
+                        formStep.classList.remove('active');
+                    }
+                });
+                
+                // Update review section if we're on the last step
+                if (currentStep === 4) {
+                    updateReviewSection();
+                }
+            }
+            
+            function validateStep(step) {
+                let isValid = true;
+                const currentFormStep = document.querySelector(`.form-step[data-step="${step}"]`);
+                
+                // Check all required fields in the current step
+                const inputs = currentFormStep.querySelectorAll('[required]');
+                inputs.forEach(input => {
+                    if (!input.value.trim()) {
+                        input.classList.add('is-invalid');
+                        isValid = false;
+                    } else {
+                        input.classList.remove('is-invalid');
+                    }
+                });
+                
+                // Additional validation for specific steps
+                if (step === 3) {
+                    const password = document.getElementById('password').value;
+                    const confirmPassword = document.getElementById('confirmPassword').value;
+                    const terms = document.getElementById('terms').checked;
+                    
+                    if (password !== confirmPassword) {
+                        document.getElementById('password').classList.add('is-invalid');
+                        document.getElementById('confirmPassword').classList.add('is-invalid');
+                        isValid = false;
+                    }
+                    
+                    if (!terms) {
+                        document.getElementById('terms').classList.add('is-invalid');
+                        isValid = false;
+                    }
+                }
+                
+                return isValid;
+            }
+            
+            function updateReviewSection() {
+                // Personal Info
+                document.getElementById('review-name').textContent = 
+                    `${document.getElementById('firstName').value} ${document.getElementById('lastName').value}`;
+                document.getElementById('review-gender').textContent = 
+                    document.getElementById('gender').value;
+                document.getElementById('review-dob').textContent = 
+                    document.getElementById('dob').value;
+                
+                // Contact Info
+                document.getElementById('review-email').textContent = 
+                    document.getElementById('email').value;
+                document.getElementById('review-phone').textContent = 
+                    document.getElementById('phone').value;
+                document.getElementById('review-address').textContent = 
+                    document.getElementById('address').value;
+                
+                // Account Info
+                document.getElementById('review-username').textContent = 
+                    document.getElementById('username').value;
+            }
+        });
+    </script>
+		
+		<!-- jQuery -->
+        <script src="assets/js/jquery-3.7.1.min.js"></script>
 
-    <script src="assets/js/jquery-3.6.0.min.js"></script>
+         <!-- Feather Icon JS -->
+		<script src="assets/js/feather.min.js"></script>
+		
+		<!-- Bootstrap Core JS -->
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+		
+		<!-- Custom JS -->
+        <script src="assets/js/theme-script.js"></script>	
+		<script src="assets/js/script.js"></script>
 
-    <script src="assets/js/feather.min.js"></script>
-
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-
-    <script src="assets/js/script.js"></script>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    function updateUsername() {
-        var name = document.querySelector('input[name="name"]').value.trim().toLowerCase();
-        var postName = document.querySelector('input[name="post_name"]').value.trim().toLowerCase();
-        var username = name && postName ? name + '.' + postName : '';
-        document.getElementById('username_display').value = username;
-    }
-    document.querySelector('input[name="name"]').addEventListener('input', updateUsername);
-    document.querySelector('input[name="post_name"]').addEventListener('input', updateUsername);
-});
-</script>
-</body>
-
+    </body>
 </html>
