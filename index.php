@@ -14,7 +14,10 @@
 	<link rel="shortcut icon" type="image/x-icon" href="assets/images/fevicon.png">
 
 	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 	<!-- Datetimepicker CSS -->
 	<link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.min.css">
@@ -125,35 +128,7 @@
 				<!-- /Search -->
 
 
-				<!-- Select Store -->
-				<li class="nav-item dropdown has-arrow main-drop select-store-dropdown">
-					<a href="javascript:void(0);" class="dropdown-toggle nav-link select-store"
-						data-bs-toggle="dropdown">
-						<span class="user-info">
-							<span class="user-letter">
-								<img src="assets/img/store/store-01.png" alt="Store Logo" class="img-fluid">
-							</span>
-							<span class="user-detail">
-								<span class="user-name">Select Store</span>
-							</span>
-						</span>
-					</a>
-					<div class="dropdown-menu dropdown-menu-right">
-						<a href="javascript:void(0);" class="dropdown-item">
-							<img src="assets/img/store/store-01.png" alt="Store Logo" class="img-fluid"> Grocery Alpha
-						</a>
-						<a href="javascript:void(0);" class="dropdown-item">
-							<img src="assets/img/store/store-02.png" alt="Store Logo" class="img-fluid"> Grocery Apex
-						</a>
-						<a href="javascript:void(0);" class="dropdown-item">
-							<img src="assets/img/store/store-03.png" alt="Store Logo" class="img-fluid"> Grocery Bevy
-						</a>
-						<a href="javascript:void(0);" class="dropdown-item">
-							<img src="assets/img/store/store-04.png" alt="Store Logo" class="img-fluid"> Grocery Eden
-						</a>
-					</div>
-				</li>
-				<!-- /Select Store -->
+				
 
 				<!-- Flag -->
 				<li class="nav-item dropdown has-arrow flag-nav nav-item-box">
@@ -178,11 +153,7 @@
 				</li>
 				<!-- /Flag -->
 
-				<li class="nav-item nav-item-box">
-					<a href="javascript:void(0);" id="btnFullscreen">
-						<i data-feather="maximize"></i>
-					</a>
-				</li>
+				
 				<li class="nav-item nav-item-box">
 					<a href="email.html">
 						<i data-feather="mail"></i>
@@ -421,7 +392,7 @@
 
 		<div class="page-wrapper">
 			<div class="content">
-				<div class="row">
+				<!--<div class="row">
 					<div class="col-xl-3 col-sm-6 col-12 d-flex">
 						<div class="dash-widget w-100">
 							<div class="dash-widgetimg">
@@ -510,10 +481,97 @@
 							</div>
 						</div>
 					</div>
-				</div>
-			
+				</div> -->
 
-				<!-- Transaction Table -->
+				<div class="row">
+					<!-- Operations Dropdown -->
+					<div class="col-xl-3 col-sm-6 col-12 d-flex mb-3">
+						<div class="dropdown w-100">
+							<button class="btn btn-primary w-100 dropdown-toggle" type="button" id="operationsDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<i class="fas fa-broadcast-tower mr-2"></i> Operations
+							</button>
+							<div class="dropdown-menu w-100" aria-labelledby="operationsDropdown">
+								<a class="dropdown-item" href="operations-energy.php">
+									<i class="fas fa-bolt mr-2"></i> Energy Radio
+								</a>
+								<a class="dropdown-item" href="operations-music.php">
+									<i class="fas fa-music mr-2"></i> Top 5 Music
+								</a>
+								<a class="dropdown-item" href="operations-images.php">
+									<i class="fas fa-image mr-2"></i> Top 5 Images
+								</a>
+								<a class="dropdown-item" href="operations-events.php">
+									<i class="fas fa-star mr-2"></i> 5-Star Events
+								</a>
+								<a class="dropdown-item" href="operations-tech.php">
+									<i class="fas fa-microchip mr-2"></i> Top 5 Tech
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<!-- Stock Management Dropdown -->
+					<div class="col-xl-3 col-sm-6 col-12 d-flex mb-3">
+						<div class="dropdown w-100">
+							<button class="btn btn-success w-100 dropdown-toggle" type="button" id="stockDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<i class="fas fa-boxes mr-2"></i> Stock Management
+							</button>
+							<div class="dropdown-menu w-100" aria-labelledby="stockDropdown">
+								<a class="dropdown-item" href="stock-inventory.php">
+									<i class="fas fa-clipboard-list mr-2"></i> Inventory
+								</a>
+								<a class="dropdown-item" href="stock-orders.php">
+									<i class="fas fa-truck mr-2"></i> Orders
+								</a>
+								<a class="dropdown-item" href="stock-suppliers.php">
+									<i class="fas fa-address-book mr-2"></i> Suppliers
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<!-- Business Development Dropdown -->
+					<div class="col-xl-3 col-sm-6 col-12 d-flex mb-3">
+						<div class="dropdown w-100">
+							<button class="btn btn-info w-100 dropdown-toggle" type="button" id="businessDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<i class="fas fa-chart-line mr-2"></i> Business Development
+							</button>
+							<div class="dropdown-menu w-100" aria-labelledby="businessDropdown">
+								<a class="dropdown-item" href="business-sales.php">
+									<i class="fas fa-handshake mr-2"></i> Sales
+								</a>
+								<a class="dropdown-item" href="business-marketing.php">
+									<i class="fas fa-bullhorn mr-2"></i> Marketing
+								</a>
+								<a class="dropdown-item" href="business-clients.php">
+									<i class="fas fa-users mr-2"></i> Clients
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<!-- Dashboard Dropdown -->
+					<div class="col-xl-3 col-sm-6 col-12 d-flex mb-3">
+						<div class="dropdown w-100">
+							<button class="btn btn-secondary w-100 dropdown-toggle" type="button" id="dashboardDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<i class="fas fa-tachometer-alt mr-2"></i> My Dashboard
+							</button>
+							<div class="dropdown-menu w-100" aria-labelledby="dashboardDropdown">
+								<a class="dropdown-item" href="dashboard-main.php">
+									<i class="fas fa-home mr-2"></i> Overview
+								</a>
+								<a class="dropdown-item" href="dashboard-reports.php">
+									<i class="fas fa-file-alt mr-2"></i> Reports
+								</a>
+								<a class="dropdown-item" href="dashboard-settings.php">
+									<i class="fas fa-cog mr-2"></i> Settings
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- Transaction Table 
 				<div class="card">
 					<div class="card-header">
 						<h4 class="card-title">Last Transactions</h4>
@@ -607,7 +665,7 @@
 							</table>
 						</div>
 					</div>
-				</div>
+				</div>-->
 			</div>
 		</div>
 
@@ -630,6 +688,8 @@
 	<!-- Feather Icon JS -->
 	<script src="assets/js/feather.min.js"></script>
 
+	
+
 	<!-- Slimscroll JS -->
 	<script src="assets/js/jquery.slimscroll.min.js"></script>
 
@@ -648,6 +708,8 @@
 	<script src="assets/js/theme-script.js"></script>
 	<script src="assets/js/script.js"></script>
 
+	<!-- Bootstrap 5 JS Bundle (only once, after all other JS) -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
