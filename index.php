@@ -13,6 +13,12 @@
 	<!-- Favicon -->
 	<link rel="shortcut icon" type="image/x-icon" href="assets/images/fevicon.png">
 
+	<!-- Bootstrap CSS -->
+
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
 	<!-- Datetimepicker CSS -->
 	<link rel="stylesheet" href="assets/css/bootstrap-datetimepicker.min.css">
 
@@ -31,6 +37,8 @@
 
 	<!-- Main CSS -->
 	<link rel="stylesheet" href="assets/css/style.css">
+	<!-- Bootstrap Bundle JS (includes Popper for dropdowns) -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </head>
 
@@ -122,7 +130,7 @@
 				<!-- /Search -->
 
 
-				
+
 
 				<!-- Flag -->
 				<li class="nav-item dropdown has-arrow flag-nav nav-item-box">
@@ -147,7 +155,7 @@
 				</li>
 				<!-- /Flag -->
 
-				
+
 				<li class="nav-item nav-item-box">
 					<a href="email.html">
 						<i data-feather="mail"></i>
@@ -316,7 +324,7 @@
 								<li class="submenu">
 									<a href="javascript:void(0);" class="subdrop active"><i data-feather="grid"></i><span>Dashboard</span><span class="menu-arrow"></span></a>
 									<ul>
-										<li><a href="admin-dashboard.html" class="active">Admin Dashboard</a></li>
+										<li><a href="admin_setting/admin-dashboard.html" class="active">Admin Dashboard</a></li>
 										<li><a href="sales-dashboard.html">Sales Dashboard</a></li>
 									</ul>
 								</li>
@@ -326,18 +334,16 @@
 										<li><a href="chat-group.html">Chat Group</a></li>
 										<li class="submenu submenu-two"><a href="javascript:void(0);">Tasks<span class="menu-arrow inside-submenu"></span></a>
 											<ul>
-												<li><a href="review-calendar.html">Review calendar</a></li>
-												<li><a href="report.html">Report</a></li>
-												<li><a href="performance-self-review.html">Performance self-review</a></li>
-												<li><a href="goal-progress.html">Goal progress</a></li>
-												<li><a href="team-feedback.html">Team feedback</a></li>
-												<li><a href="personal-development-plan.html">Personal development plan</a></li>
-												<li><a href="prioritize-tasks.html">Prioritize tasks</a></li>
+												<li id="review-calendar"><a href="review-calendar.html">Review calendar</a></li>
+												<li id="report"><a href="report.html">Report</a></li>
+												<li id="performance-self-review"><a href="performance-self-review.html">Performance self-review</a></li>
+												<li id="goal-progress"><a href="goal-progress.html">Goal progress</a></li>
+												<li id="team-feedback"><a href="team-feedback.html">Team feedback</a></li>
+												<li id="personal-development-plan"><a href="personal-development-plan.html">Personal development plan</a></li>
+												<li id="prioritize-tasks"><a href="prioritize-tasks.html">Prioritize tasks</a></li>
 											</ul>
 										</li>
 										<li><a href="email.html">Email</a></li>
-										<li><a href="to-do.html">To Do</a></li>
-										<li><a href="notes.html">Notes</a></li>
 										<li><a href="file-manager.html">File Manager</a></li>
 									</ul>
 								</li>
@@ -348,7 +354,7 @@
 							<ul>
 								<li><a href="administration-finance.html"><i data-feather="box"></i><span>Administration & Finance</span></a></li>
 								<li><a href="operations.html"><i data-feather="plus-square"></i><span>Operations</span></a></li>
-								<li><a href="sale-marketing.html"><i data-feather="codesandbox"></i><span>Business Development </br> sale & marketing</span></a></li>
+								<li><a href="sale-marketing.html"><i data-feather="codesandbox"></i><span>Business Development<br>sale & marketing</span></a></li>
 								<li><a href="human-resources.html"><i data-feather="trending-down"></i><span>Human Resources</span></a></li>
 								<li><a href="engineering.html"><i data-feather="codepen"></i><span>Engineering</span></a></li>
 								<li><a href="sub-category.html"><i data-feather="speaker"></i><span>Sub Category</span></a></li>
@@ -384,6 +390,101 @@
 		<!-- /Sidebar -->
 
 
+		<div class="page-wrapper">
+			<div class="content">
+
+
+
+				<div class="row">
+					<!-- Operations Dropdown -->
+					<div class="col-xl-3 col-sm-6 col-12 d-flex mb-3">
+						<div class="dropdown w-100">
+							<button class="btn btn-secondary w-100 dropdown-toggle" type="button" id="dashboardDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<i class="fas fa-tachometer-alt mr-2"></i> My Workspace
+							</button>
+							<div class="dropdown-menu w-100" aria-labelledby="dashboardDropdown">
+								<a class="dropdown-item" href="dashboard-main.php">
+									<i class="fas fa-home mr-2"></i> Energy Radio
+								</a>
+								<a class="dropdown-item" href="operations-music.php">
+									<i class="fas fa-music me-2"></i> Top 5 Music
+								</a>
+								<a class="dropdown-item" href="operations-images.php">
+									<i class="fas fa-image me-2"></i> Top 5 Images
+								</a>
+								<a class="dropdown-item" href="operations-events.php">
+									<i class="fas fa-star me-2"></i> 5-Star Events
+								</a>
+								<a class="dropdown-item" href="operations-tech.php">
+									<i class="fas fa-microchip me-2"></i> Top 5 Tech
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<!-- Stock Management Dropdown -->
+					<div class="col-xl-3 col-sm-6 col-12 d-flex mb-3">
+						<div class="dropdown w-100">
+							<button class="btn btn-success w-100 dropdown-toggle" type="button" id="stockDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<i class="fas fa-boxes mr-2"></i> Stock Management
+							</button>
+							<div class="dropdown-menu w-100" aria-labelledby="stockDropdown">
+								<a class="dropdown-item" href="stock-inventory.php">
+									<i class="fas fa-clipboard-list mr-2"></i> Inventory
+								</a>
+								<a class="dropdown-item" href="stock-orders.php">
+									<i class="fas fa-truck mr-2"></i> Orders
+								</a>
+								<a class="dropdown-item" href="stock-suppliers.php">
+									<i class="fas fa-address-book mr-2"></i> Suppliers
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<!-- Business Development Dropdown -->
+					<div class="col-xl-3 col-sm-6 col-12 d-flex mb-3">
+						<div class="dropdown w-100">
+							<button class="btn btn-info w-100 dropdown-toggle" type="button" id="businessDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<i class="fas fa-chart-line mr-2"></i> Business Development
+							</button>
+							<div class="dropdown-menu w-100" aria-labelledby="businessDropdown">
+								<a class="dropdown-item" href="business-sales.php">
+									<i class="fas fa-handshake mr-2"></i> Sales
+								</a>
+								<a class="dropdown-item" href="business-marketing.php">
+									<i class="fas fa-bullhorn mr-2"></i> Marketing
+								</a>
+								<a class="dropdown-item" href="business-clients.php">
+									<i class="fas fa-users mr-2"></i> Clients
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<!-- Dashboard Dropdown -->
+					<div class="col-xl-3 col-sm-6 col-12 d-flex mb-3">
+						<div class="dropdown w-100">
+							<button class="btn btn-secondary w-100 dropdown-toggle" type="button" id="dashboardDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<i class="fas fa-tachometer-alt mr-2"></i> My Dashboard
+							</button>
+							<div class="dropdown-menu w-100" aria-labelledby="dashboardDropdown">
+								<a class="dropdown-item" href="dashboard-main.php">
+									<i class="fas fa-home mr-2"></i> Overview
+								</a>
+								<a class="dropdown-item" href="dashboard-reports.php">
+									<i class="fas fa-file-alt mr-2"></i> Reports
+								</a>
+								<a class="dropdown-item" href="dashboard-settings.php">
+									<i class="fas fa-cog mr-2"></i> Settings
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
 		<div class="customizer-links" id="setdata">
 			<ul class="sticky-sidebar">
 				<li class="sidebar-icons">
@@ -395,6 +496,7 @@
 		</div>
 
 	</div>
+	</div>
 	<!-- /Main Wrapper -->
 
 	<!-- jQuery -->
@@ -403,7 +505,7 @@
 	<!-- Feather Icon JS -->
 	<script src="assets/js/feather.min.js"></script>
 
-	
+
 
 	<!-- Slimscroll JS -->
 	<script src="assets/js/jquery.slimscroll.min.js"></script>
@@ -422,6 +524,9 @@
 	<!-- Custom JS -->
 	<script src="assets/js/theme-script.js"></script>
 	<script src="assets/js/script.js"></script>
+
+	<!-- Bootstrap 5 JS Bundle (only once, after all other JS) -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
