@@ -12,3 +12,11 @@ CREATE TABLE users (
     dob DATE NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+CREATE TABLE event_order (
+    event_id INT AUTO_INCREMENT PRIMARY KEY,
+    event_type VARCHAR(255) NOT NULL,
+    event_name VARCHAR(255) NOT NULL,
+    date DATE NOT NULL,
+    location VARCHAR(255) NOT NULL,
+    duration INT NOT NULL 
+);
