@@ -406,51 +406,82 @@
 				<div class="container mt-5">
 					<div class="modal-header">
 						<h4 class="modal-title">Task Module</h4>
-						<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
 					</div>
-					<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">Launch demo modal</button>
-					<div class="modal" id="myModal">
+				<div class="container mt-3 d-flex flex-wrap justify-content-center gap-3">
+					<div class="task-module d-flex flex-wrap justify-content-center gap-3">
+						<button type="button" class="btn btn-primary btn-lg" style="background-color: #5a5a5a; color: #fff;" data-bs-toggle="modal" data-bs-target="#eventModal">Event Order</button>
+						<button type="button" class="btn btn-primary btn-lg" style="background-color: #5a5a5a; color: #fff;" data-bs-toggle="modal" data-bs-target="#quoteModal">Quote Generator</button>
+						<button type="button" class="btn btn-primary btn-lg" style="background-color: #5a5a5a; color: #fff;" data-bs-toggle="modal" data-bs-target="#transportModal">Transport Fleet Record</button>
+						<button type="button" class="btn btn-primary btn-lg" style="background-color: #5a5a5a; color: #fff;" data-bs-toggle="modal" data-bs-target="#equipmentModal">Equipment Records</button>
+						<button type="button" class="btn btn-primary btn-lg" style="background-color: #5a5a5a; color: #fff;" data-bs-toggle="modal" data-bs-target="#financeModal">Finance Record Expence, Income</button>
+						<button type="button" class="btn btn-primary btn-lg" style="background-color: #5a5a5a; color: #fff;" data-bs-toggle="modal" data-bs-target="#personalModal">Personal Report</button>
+						<button type="button" class="btn btn-primary btn-lg" style="background-color: #5a5a5a; color: #fff;" data-bs-toggle="modal" data-bs-target="#recruitmentModal">Recruitment</button>
+						<button type="button" class="btn btn-primary btn-lg" style="background-color: #5a5a5a; color: #fff;" data-bs-toggle="modal" data-bs-target="#employeeModal">Employee Management</button>
+						<button type="button" class="btn btn-primary btn-lg" style="background-color: #5a5a5a; color: #fff;" data-bs-toggle="modal" data-bs-target="#leaveModal">Leave Management</button>
+						<button type="button" class="btn btn-primary btn-lg" style="background-color: #5a5a5a; color: #fff;" data-bs-toggle="modal" data-bs-target="#marketModal">Market Analysis</button>
+					</div>
+				</div>
+				<div class="container">
+					<div class="modal" id="eventModal">
 						<div class="modal-dialog">
 							<div class="modal-content">
 								<div class="modal-header">
-									<h4 class="modal-title">Task Module</h4>
+									<h4 class="modal-title">Event Order</h4>
 									<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
 								</div>
 								<div class="modal-body">
 									<div class="form">
-										<form>
+										<form action="modules.event-order.php" method="post">
 											<div class="form-group">
-												<label for="exampleInputEmail1">Task Name</label>
-												<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Task Name">
+												<label for="eventType">Event Type</label>
+												<select class="form-control" id="eventType">
+													<option value="Concert">Concert</option>
+													<option value="Wedding">Wedding</option>
+													<option value="Conference">Conference</option>
+													<option value="Radio Program">Radio Program</option>
+													<option value="Studio Program">Studio Program</option>
+													<option value="Service Fourniture">Service Fourniture</option>
+												</select>
 											</div>
 											<div class="form-group">
-												<label for="exampleInputPassword1">Task Description</label>
-												<input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Task Description">
+												<label for="eventName">Event Name</label>
+												<input type="text" class="form-control" id="eventName" aria-describedby="eventNameHelp" placeholder="Enter Event Name">
 											</div>
-											<button type="submit" class="btn btn-primary">Submit</button>	
+											<div class="form-group">
+												<label for="date">Date</label>
+												<input type="date" class="form-control" id="date" placeholder="Enter Date">
+											</div>
+											<div class="form-group">
+												<label for="location">Location</label>
+												<input type="text" class="form-control" id="location" placeholder="Enter Location">
+											</div>
+											<div class="form-group">
+												<label for="duration">Duration</label>
+												<input type="number" class="form-control" id="duration" placeholder="Enter Duration">
+											</div>
 										</form>
 									</div>
 								</div>
 								<div class="modal-footer">
 									<button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+									<button type="submit" class="btn btn-primary">Submit</button>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
+			</div>
+			<!-- /Module Header -->
 
-				<!-- /Module Header -->
-
-				<div class="customizer-links" id="setdata">
-					<ul class="sticky-sidebar">
-						<li class="sidebar-icons">
+			<div class="customizer-links" id="setdata">
+				<ul class="sticky-sidebar">
+					<li class="sidebar-icons">
 							<a href="#" class="navigation-add" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="Theme">
 								<i data-feather="settings" class="feather-five"></i>
 							</a>
 						</li>
 					</ul>
 				</div>
-
 			</div>
 		</div>
 	</div>
