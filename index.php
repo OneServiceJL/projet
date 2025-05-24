@@ -61,13 +61,13 @@
 			<!-- Logo -->
 			<div class="header-left active">
 				<a href="index.html" class="logo logo-normal">
-					<img src="assets/images/fevicon.png" alt="">
+					<img src="assets/images/Fevicon_2_top5_sai.png" alt="">
 				</a>
 				<a href="index.html" class="logo logo-white">
-					<img src="assets/images/fevicon.png" alt="">
+					<img src="assets/images/Fevicon_2_top5_sai.png" alt="">
 				</a>
 				<a href="index.html" class="logo-small">
-					<img src="assets/images/fevicon.png" alt="">
+					<img src="assets/images/Fevicon_2_top5_sai.png" alt="">
 				</a>
 				<a id="toggle_btn" href="javascript:void(0);">
 					<i data-feather="chevrons-left" class="feather-16"></i>
