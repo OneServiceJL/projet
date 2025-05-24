@@ -428,11 +428,11 @@
 											</div>
 											<div class="users-list-body">
 												<div>
-													<h5>Mark Villiams</h5>
-													<p>Have you called them?</p>
+													<h5></h5>
+													<p></p>
 												</div>
 												<div class="last-chat-time">
-													<small class="text-muted">10:20 PM</small>
+													<small class="text-muted"></small>
 													<div class="chat-pin">
 														<i class="bx bx-pin me-2"></i>
 														<i class="bx bx-check-double"></i>
@@ -450,8 +450,8 @@
 											</div>
 											<div class="users-list-body">
 												<div>
-													<h5>Elizabeth Sosa</h5>
-													<p><span class="animate-typing-col">Typing
+													<h5></h5>
+													<p><span class="animate-typing-col">
 															<span class="dot"></span>
 															<span class="dot"></span>
 															<span class="dot"></span>
@@ -459,7 +459,7 @@
 													</p>
 												</div>
 												<div class="last-chat-time">
-													<small class="text-muted">Yesterday</small>
+													<small class="text-muted"></small>
 													<div class="chat-pin">
 														<i class="bx bx-pin"></i>
 													</div>
@@ -474,11 +474,11 @@
 											</div>
 											<div class="users-list-body">
 												<div>
-													<h5>Michael Howard</h5>
-													<p>Thank you</p>
+													<h5></h5>
+													<p></p>
 												</div>
 												<div class="last-chat-time">
-													<small class="text-muted">10:20 PM</small>
+													<small class="text-muted"></small>
 													<div class="chat-pin">
 														<i class="bx bx-pin me-2"></i>
 														<i class="bx bx-check-double green-check"></i>
@@ -503,12 +503,12 @@
 											</div>
 											<div class="users-list-body">
 												<div>
-													<h5>Horace Keene</h5>
-													<p>Have you called them?</p>
+													<h5></h5>
+													<p></p>
 												</div>
 												<div class="last-chat-time">
-													<small class="text-muted">Just Now</small>
-													<div class="new-message-count">11</div>
+													<small class="text-muted"></small>
+													<div class="new-message-count"></div>
 												</div>
 											</div>
 										</a>
@@ -522,11 +522,11 @@
 											</div>
 											<div class="users-list-body">
 												<div>
-													<h5>Hollis Tran</h5>
-													<p><i class="bx bx-video me-1"></i>Video</p>
+													<h5></h5>
+													<p><i class="bx bx-video me-1"></i></p>
 												</div>
 												<div class="last-chat-time">
-													<small class="text-muted">Yesterday</small>
+													<small class="text-muted"></small>
 													<div class="chat-pin">
 														<i class="bx bx-check"></i>
 													</div>
@@ -541,11 +541,11 @@
 											</div>
 											<div class="users-list-body">
 												<div>
-													<h5>James Albert</h5>
-													<p><i class="bx bx-file me-1"></i>Project Tools.doc</p>
+													<h5></h5>
+													<p><i class="bx bx-file me-1"></i></p>
 												</div>
 												<div class="last-chat-time">
-													<small class="text-muted">10:20 PM</small>
+													<small class="text-muted"></small>
 
 												</div>
 											</div>
@@ -560,11 +560,11 @@
 											</div>
 											<div class="users-list-body">
 												<div>
-													<h5>Debra Jones</h5>
-													<p><i class="bx bx-microphone me-1"></i>Audio</p>
+													<h5></h5>
+													<p><i class="bx bx-microphone me-1"></i></p>
 												</div>
 												<div class="last-chat-time">
-													<small class="text-muted">12:30 PM</small>
+													<small class="text-muted"></small>
 													<div class="chat-pin">
 														<i class="bx bx-check-double green-check"></i>
 													</div>
@@ -581,11 +581,11 @@
 											</div>
 											<div class="users-list-body">
 												<div>
-													<h5>Dina Brown</h5>
-													<p>Have you called them?</p>
+													<h5></h5>
+													<p></p>
 												</div>
 												<div class="last-chat-time">
-													<small class="text-muted">Yesterday</small>
+													<small class="text-muted"></small>
 													<div class="chat-pin">
 														<i class="bx bx-microphone-off"></i>
 													</div>
@@ -602,11 +602,11 @@
 											</div>
 											<div class="users-list-body">
 												<div>
-													<h5>Judy Mercer</h5>
-													<p class="missed-call-col"><i class="bx bx-phone-incoming me-1"></i>Missed Call</p>
+													<h5></h5>
+													<p class="missed-call-col"><i class="bx bx-phone-incoming me-1"></i></p>
 												</div>
 												<div class="last-chat-time">
-													<small class="text-muted">25/July/23</small>
+													<small class="text-muted"></small>
 												</div>
 											</div>
 										</a>
@@ -620,11 +620,11 @@
 											</div>
 											<div class="users-list-body">
 												<div>
-													<h5>Richard Ohare</h5>
-													<p><i class="bx bx-image-alt me-1"></i>Photo</p>
+													<h5></h5>
+													<p><i class="bx bx-image-alt me-1"></i></p>
 												</div>
 												<div class="last-chat-time">
-													<small class="text-muted">27/July/23</small>
+													<small class="text-muted"></small>
 													<div class="chat-pin">
 														<i class="bx bx-check-double"></i>
 													</div>
@@ -660,9 +660,9 @@
 									<img src="../assets/img/avatar/avatar-2.jpg" class="rounded-circle" alt="image">
 								</figure>
 								<div class="mt-1">
-									<h5>Mark Villiams</h5>
+									<h5></h5>
 									<small class="last-seen">
-										Last Seen at 07:15 PM
+										
 									</small>
 								</div>
 							</div>
@@ -722,7 +722,7 @@
 									</div>
 									<div class="chat-content">
 										<div class="chat-profile-name">
-											<h6>Mark Villiams<span>8:16 PM</span></h6>
+											<h6><span></span></h6>
 											<div class="chat-action-btns ms-3">
 												<div class="chat-action-col">
 													<a class="#" href="#" data-bs-toggle="dropdown">
@@ -741,7 +741,7 @@
 											</div>
 										</div>
 										<div class="message-content">
-											Hello <a href="javascript:void(0);">@Alex</a> Thank you for the beautiful web design ahead schedule.
+											 <a href="javascript:void(0);"></a> 
 											<div class="emoj-group">
 												<ul>
 													<li class="emoj-action"><a href="javascript:void(0);"><i class="bx bx-smile"></i></a>
@@ -763,12 +763,12 @@
 									</div>
 								</div>
 								<div class="chat-line">
-									<span class="chat-date">Today, July 24</span>
+									<span class="chat-date"></span>
 								</div>
 								<div class="chats chats-right">
 									<div class="chat-content">
 										<div class="chat-profile-name text-end">
-											<h6>Alex Smith<span>8:16 PM</span></h6>
+											<h6><span></span></h6>
 											<div class="chat-action-btns ms-3">
 												<div class="chat-action-col">
 													<a class="#" href="#" data-bs-toggle="dropdown">
@@ -806,9 +806,7 @@
 											</div>
 											<div class="chat-voice-group">
 												<ul>
-													<li><a href="javascript:void(0);"><span><img src="../assets/img/icons/play-01.svg" alt="image"></span></a></li>
-													<li><img src="../assets/img/icons/voice.svg" alt="image"></li>
-													<li>0:05</li>
+													
 												</ul>
 											</div>
 										</div>
@@ -823,7 +821,7 @@
 									</div>
 									<div class="chat-content">
 										<div class="chat-profile-name">
-											<h6>Mark Villiams<span>8:16 PM</span><span class="check-star"><i class="bx bxs-star"></i></span></h6>
+											<h6><span></span><span class="check-star"><i class="bx bxs-star"></i></span></h6>
 											<div class="chat-action-btns ms-2">
 												<div class="chat-action-col">
 													<a class="#" href="#" data-bs-toggle="dropdown">
@@ -842,8 +840,8 @@
 											</div>
 										</div>
 										<div class="message-content award-link chat-award-link">
-											<a href="javascript:void(0);" class="mb-1">https://www.youtube.com/watch?v=GCmL3mS0Psk</a>
-											<img src="../assets/img/sending-img.png" alt="img">
+											<a href="javascript:void(0);" class="mb-1"></a>
+											
 											<div class="emoj-group">
 												<ul>
 													<li class="emoj-action"><a href="javascript:void(0);"><i class="bx bx-smile"></i></a>
@@ -867,7 +865,7 @@
 								<div class="chats chats-right">
 									<div class="chat-content">
 										<div class="chat-profile-name justify-content-end">
-											<h6>Alex Smith<span>8:16 PM</span></h6>
+											<h6><span></span></h6>
 											<div class="chat-action-btns ms-3">
 												<div class="chat-action-col">
 													<a class="#" href="#" data-bs-toggle="dropdown">
@@ -943,7 +941,7 @@
 									</div>
 									<div class="chat-content">
 										<div class="chat-profile-name">
-											<h6>Mark Villiams<span>8:16 PM</span></h6>
+											<h6><span></span></h6>
 											<div class="chat-action-btns ms-3">
 												<div class="chat-action-col">
 													<a class="#" href="#" data-bs-toggle="dropdown">
@@ -961,42 +959,10 @@
 												</div>
 											</div>
 										</div>
-										<div class="message-content review-files">
-											<p class="d-flex align-items-center">Please check and review the files<span class="ms-1 d-flex"><img src="../assets/img/icons/smile-chat.svg" alt="Icon"></span></p>
-											<div class="file-download d-flex align-items-center mb-0">
-												<div class="file-type d-flex align-items-center justify-content-center me-2">
-													<i class="bx bxs-file-doc"></i>
-												</div>
-												<div class="file-details">
-													<span class="file-name">Landing_page_V1.doc</span>
-													<ul>
-														<li>80 Bytes</li>
-														<li><a href="javascript:void(0);">Download</a></li>
-													</ul>
-												</div>
-											</div>
-											<div class="emoj-group">
-												<ul>
-													<li class="emoj-action"><a href="javascript:void(0);"><i class="bx bx-smile"></i></a>
-														<div class="emoj-group-list">
-															<ul>
-																<li><a href="javascript:void(0);"><img src="../assets/img/icons/emoj-icon-01.svg" alt="Icon"></a></li>
-																<li><a href="javascript:void(0);"><img src="../assets/img/icons/emoj-icon-02.svg" alt="Icon"></a></li>
-																<li><a href="javascript:void(0);"><img src="../assets/img/icons/emoj-icon-03.svg" alt="Icon"></a></li>
-																<li><a href="javascript:void(0);"><img src="../assets/img/icons/emoj-icon-04.svg" alt="Icon"></a></li>
-																<li><a href="javascript:void(0);"><img src="../assets/img/icons/emoj-icon-05.svg" alt="Icon"></a></li>
-																<li class="add-emoj"><a href="javascript:void(0);"><i class="bx bx-plus"></i></a></li>
-															</ul>
-														</div>
-													</li>
-													<li><a href="#" data-bs-toggle="modal" data-bs-target="#forward-message"><i class="bx bx-share"></i></a></li>
-												</ul>
-											</div>
-										</div>
+									
 										<div class="like-chat-grp">
 											<ul>
-												<li class="like-chat"><a href="javascript:void(0);">2<img src="../assets/img/icons/like.svg" alt="Icon"></a></li>
-												<li class="comment-chat"><a href="javascript:void(0);">2<img src="../assets/img/icons/heart.svg" alt="Icon"></a></li>
+												
 											</ul>
 										</div>
 									</div>
@@ -1007,7 +973,7 @@
 									</div>
 									<div class="chat-content">
 										<div class="chat-profile-name">
-											<h6>Mark Villiams<span>8:16 PM</span></h6>
+											<h6><span></span></h6>
 											<div class="chat-action-btns ms-3">
 												<div class="chat-action-col">
 													<a class="#" href="#" data-bs-toggle="dropdown">
@@ -1026,19 +992,13 @@
 											</div>
 										</div>
 										<div class="message-content">
-											Thank you for your support
+											
 											<div class="emoj-group">
 												<ul>
 													<li class="emoj-action"><a href="javascript:void(0);"><i class="bx bx-smile"></i></a>
 														<div class="emoj-group-list">
 															<ul>
-																<li><a href="javascript:void(0);"><img src="../assets/img/icons/emoj-icon-01.svg" alt="Icon"></a></li>
-																<li><a href="javascript:void(0);"><img src="../assets/img/icons/emoj-icon-02.svg" alt="Icon"></a></li>
-																<li><a href="javascript:void(0);"><img src="../assets/img/icons/emoj-icon-03.svg" alt="Icon"></a></li>
-																<li><a href="javascript:void(0);"><img src="../assets/img/icons/emoj-icon-04.svg" alt="Icon"></a></li>
-																<li><a href="javascript:void(0);"><img src="../assets/img/icons/emoj-icon-05.svg" alt="Icon"></a></li>
-																<li class="add-emoj"><a href="javascript:void(0);"><i class="bx bx-plus"></i></a></li>
-															</ul>
+																
 														</div>
 													</li>
 													<li><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#forward-message"><i class="bx bx-share"></i></a></li>
@@ -1054,7 +1014,7 @@
 									</div>
 									<div class="chat-content chat-cont-type">
 										<div class="chat-profile-name chat-type-wrapper">
-											<p>Mark Villiams Typing...</p>
+											<p></p>
 										</div>
 									</div>
 								</div>
@@ -1068,7 +1028,7 @@
 									</div>
 									<div class="chat-content">
 										<div class="chat-profile-name">
-											<h6>Mark Villiams<span>8:16 PM</span></h6>
+											<h6><span></span></h6>
 											<div class="chat-action-btns ms-3">
 												<div class="chat-action-col">
 													<a class="#" href="#" data-bs-toggle="dropdown">
@@ -1164,9 +1124,9 @@
 										<figure class="avatar avatar-xl mb-3">
 											<img src="../assets/img/avatar/avatar-2.jpg" class="rounded-circle" alt="image">
 										</figure>
-										<h5 class="profile-name">Mark Villiams</h5>
+										<h5 class="profile-name"></h5>
 										<div class="last-seen-profile">
-											<span>last seen at 07:15 PM</span>
+											<span></span>
 										</div>
 										<div class="chat-options chat-option-profile">
 											<ul class="list-inline">
