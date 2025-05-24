@@ -709,7 +709,19 @@
 							<div class="card">
 								<div class="card-header justify-content-between">
 									<div class="card-title">
-										Always responsive
+										<select class="form-select w-25" id="module-select">
+											<option value="">Select Module</option>
+											<option value="eventModal">Event Order</option>
+											<option value="quoteModal">Quote Generator</option>
+											<option value="transportModal">Transport Fleet Record</option>
+											<option value="equipmentModal">Equipment Records</option>
+											<option value="financeModal">Finance Record Expence, Income</option>
+											<option value="personalModal">Personal Report</option>
+											<option value="recruitmentModal">Recruitment</option>
+											<option value="employeeModal">Employee Management</option>
+											<option value="leaveModal">Leave Management</option>
+											<option value="marketModal">Market Analysis</option>
+										</select>
 									</div>
 								</div>
 								<div class="card-body">
