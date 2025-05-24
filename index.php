@@ -407,75 +407,308 @@
 					<div class="modal-header">
 						<h4 class="modal-title">Task Module</h4>
 					</div>
-				<div class="container mt-3 d-flex flex-wrap justify-content-center gap-3">
-					<div class="task-module d-flex flex-wrap justify-content-center gap-3">
-						<button type="button" class="btn btn-primary btn-lg" style="background-color: #5a5a5a; color: #fff;" data-bs-toggle="modal" data-bs-target="#eventModal">Event Order</button>
-						<button type="button" class="btn btn-primary btn-lg" style="background-color: #5a5a5a; color: #fff;" data-bs-toggle="modal" data-bs-target="#quoteModal">Quote Generator</button>
-						<button type="button" class="btn btn-primary btn-lg" style="background-color: #5a5a5a; color: #fff;" data-bs-toggle="modal" data-bs-target="#transportModal">Transport Fleet Record</button>
-						<button type="button" class="btn btn-primary btn-lg" style="background-color: #5a5a5a; color: #fff;" data-bs-toggle="modal" data-bs-target="#equipmentModal">Equipment Records</button>
-						<button type="button" class="btn btn-primary btn-lg" style="background-color: #5a5a5a; color: #fff;" data-bs-toggle="modal" data-bs-target="#financeModal">Finance Record Expence, Income</button>
-						<button type="button" class="btn btn-primary btn-lg" style="background-color: #5a5a5a; color: #fff;" data-bs-toggle="modal" data-bs-target="#personalModal">Personal Report</button>
-						<button type="button" class="btn btn-primary btn-lg" style="background-color: #5a5a5a; color: #fff;" data-bs-toggle="modal" data-bs-target="#recruitmentModal">Recruitment</button>
-						<button type="button" class="btn btn-primary btn-lg" style="background-color: #5a5a5a; color: #fff;" data-bs-toggle="modal" data-bs-target="#employeeModal">Employee Management</button>
-						<button type="button" class="btn btn-primary btn-lg" style="background-color: #5a5a5a; color: #fff;" data-bs-toggle="modal" data-bs-target="#leaveModal">Leave Management</button>
-						<button type="button" class="btn btn-primary btn-lg" style="background-color: #5a5a5a; color: #fff;" data-bs-toggle="modal" data-bs-target="#marketModal">Market Analysis</button>
+					<div class="container mt-3 d-flex flex-wrap justify-content-center gap-3">
+						<div class="task-module d-flex flex-wrap justify-content-center gap-3">
+							<button type="button" class="btn btn-primary btn-lg" style="background-color: #5a5a5a; color: #fff;" data-bs-toggle="modal" data-bs-target="#eventModal">Event Order</button>
+							<button type="button" class="btn btn-primary btn-lg" style="background-color: #5a5a5a; color: #fff;" data-bs-toggle="modal" data-bs-target="#quoteModal">Quote Generator</button>
+							<button type="button" class="btn btn-primary btn-lg" style="background-color: #5a5a5a; color: #fff;" data-bs-toggle="modal" data-bs-target="#transportModal">Transport Fleet Record</button>
+							<button type="button" class="btn btn-primary btn-lg" style="background-color: #5a5a5a; color: #fff;" data-bs-toggle="modal" data-bs-target="#equipmentModal">Equipment Records</button>
+							<button type="button" class="btn btn-primary btn-lg" style="background-color: #5a5a5a; color: #fff;" data-bs-toggle="modal" data-bs-target="#financeModal">Finance Record Expence, Income</button>
+							<button type="button" class="btn btn-primary btn-lg" style="background-color: #5a5a5a; color: #fff;" data-bs-toggle="modal" data-bs-target="#personalModal">Personal Report</button>
+							<button type="button" class="btn btn-primary btn-lg" style="background-color: #5a5a5a; color: #fff;" data-bs-toggle="modal" data-bs-target="#recruitmentModal">Recruitment</button>
+							<button type="button" class="btn btn-primary btn-lg" style="background-color: #5a5a5a; color: #fff;" data-bs-toggle="modal" data-bs-target="#employeeModal">Employee Management</button>
+							<button type="button" class="btn btn-primary btn-lg" style="background-color: #5a5a5a; color: #fff;" data-bs-toggle="modal" data-bs-target="#leaveModal">Leave Management</button>
+							<button type="button" class="btn btn-primary btn-lg" style="background-color: #5a5a5a; color: #fff;" data-bs-toggle="modal" data-bs-target="#marketModal">Market Analysis</button>
+						</div>
 					</div>
-				</div>
-				<div class="container">
-					<div class="modal" id="eventModal">
-						<div class="modal-dialog">
-							<div class="modal-content">
-								<div class="modal-header">
-									<h4 class="modal-title">Event Order</h4>
-									<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-								</div>
-								<div class="modal-body">
-									<div class="form">
-										<form action="modules.event-order.php" method="post">
-											<div class="form-group">
-												<label for="eventType">Event Type</label>
-												<select class="form-control" id="eventType">
-													<option value="Concert">Concert</option>
-													<option value="Wedding">Wedding</option>
-													<option value="Conference">Conference</option>
-													<option value="Radio Program">Radio Program</option>
-													<option value="Studio Program">Studio Program</option>
-													<option value="Service Fourniture">Service Fourniture</option>
-												</select>
-											</div>
-											<div class="form-group">
-												<label for="eventName">Event Name</label>
-												<input type="text" class="form-control" id="eventName" aria-describedby="eventNameHelp" placeholder="Enter Event Name">
-											</div>
-											<div class="form-group">
-												<label for="date">Date</label>
-												<input type="date" class="form-control" id="date" placeholder="Enter Date">
-											</div>
-											<div class="form-group">
-												<label for="location">Location</label>
-												<input type="text" class="form-control" id="location" placeholder="Enter Location">
-											</div>
-											<div class="form-group">
-												<label for="duration">Duration</label>
-												<input type="number" class="form-control" id="duration" placeholder="Enter Duration">
-											</div>
-										</form>
+					<div class="container">
+						<div class="modal" id="eventModal">
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<h4 class="modal-title">Event Order</h4>
+										<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
 									</div>
-								</div>
-								<div class="modal-footer">
-									<button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-									<button type="submit" class="btn btn-primary">Submit</button>
+									<div class="modal-body">
+										<div class="form">
+											<form action="modules.event-order.php" method="post">
+												<div class="form-group">
+													<label for="eventType">Event Type</label>
+													<select class="form-control" id="eventType">
+														<option value="Concert">Concert</option>
+														<option value="Wedding">Wedding</option>
+														<option value="Conference">Conference</option>
+														<option value="Radio Program">Radio Program</option>
+														<option value="Studio Program">Studio Program</option>
+														<option value="Service Fourniture">Service Fourniture</option>
+													</select>
+												</div>
+												<div class="form-group">
+													<label for="eventName">Event Name</label>
+													<input type="text" class="form-control" id="eventName" aria-describedby="eventNameHelp" placeholder="Enter Event Name">
+												</div>
+												<div class="form-group">
+													<label for="date">Date</label>
+													<input type="date" class="form-control" id="date" placeholder="Enter Date">
+												</div>
+												<div class="form-group">
+													<label for="location">Location</label>
+													<input type="text" class="form-control" id="location" placeholder="Enter Location">
+												</div>
+												<div class="form-group">
+													<label for="duration">Duration</label>
+													<input type="number" class="form-control" id="duration" placeholder="Enter Duration">
+												</div>
+											</form>
+										</div>
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+										<button type="submit" class="btn btn-primary">Submit</button>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-			<!-- /Module Header -->
+				<!-- /Module Header -->
 
-			<div class="customizer-links" id="setdata">
-				<ul class="sticky-sidebar">
-					<li class="sidebar-icons">
+				<!-- Table -->
+				<div class="container mt-5">
+					<div class="row">
+						<div class="col">
+							<div class="card">
+								<div class="card-header justify-content-between">
+									<div class="card-title">
+										Small Tables
+									</div>
+
+								</div>
+								<div class="card-body">
+									<div class="table-responsive">
+										<table class="table text-nowrap table-sm">
+											<thead>
+												<tr>
+													<th scope="col">Invoice</th>
+													<th scope="col">Created Date</th>
+													<th scope="col">Status</th>
+													<th scope="col">Action</th>
+
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<th scope="row">
+														<div class="form-check">
+															<input class="form-check-input" type="checkbox" value="" id="checkebox-sm" checked="">
+															<label class="form-check-label" for="checkebox-sm">
+																Zelensky
+															</label>
+														</div>
+													</th>
+													<td>25-Apr-2021</td>
+													<td><span class="badge bg-soft-success">Paid</span></td>
+													<td>
+														<div class="hstack gap-2 fs-15">
+															<a href="javascript:void(0);" class="btn btn-icon btn-sm btn-light"><i class="feather-download"></i></a>
+															<a href="javascript:void(0);" class="btn btn-icon btn-sm btn-light"><i class="feather-edit"></i></a>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">
+														<div class="form-check">
+															<input class="form-check-input" type="checkbox" value="" id="checkebox-sm1">
+															<label class="form-check-label" for="checkebox-sm1">
+																Kim Jong
+															</label>
+														</div>
+													</th>
+													<td>29-April-2022</td>
+													<td><span class="badge bg-soft-danger">Pending</span></td>
+													<td>
+														<div class="hstack gap-2 fs-15">
+															<a href="javascript:void(0);" class="btn btn-icon btn-sm btn-light"><i class="feather-download"></i></a>
+															<a href="javascript:void(0);" class="btn btn-icon btn-sm btn-light"><i class="feather-edit"></i></a>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">
+														<div class="form-check">
+															<input class="form-check-input" type="checkbox" value="" id="checkebox-sm2">
+															<label class="form-check-label" for="checkebox-sm2">
+																Obana
+															</label>
+														</div>
+													</th>
+													<td>30-Nov-2022</td>
+													<td><span class="badge bg-soft-success">Paid</span></td>
+													<td>
+														<div class="hstack gap-2 fs-15">
+															<a href="javascript:void(0);" class="btn btn-icon btn-sm btn-light"><i class="feather-download"></i></a>
+															<a href="javascript:void(0);" class="btn btn-icon btn-sm btn-light"><i class="feather-edit"></i></a>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">
+														<div class="form-check">
+															<input class="form-check-input" type="checkbox" value="" id="checkebox-sm3">
+															<label class="form-check-label" for="checkebox-sm3">
+																Sean Paul
+															</label>
+														</div>
+													</th>
+													<td>01-Jan-2022</td>
+													<td><span class="badge bg-soft-success">Paid</span></td>
+													<td>
+														<div class="hstack gap-2 fs-15">
+															<a href="javascript:void(0);" class="btn btn-icon btn-sm btn-light"><i class="feather-download"></i></a>
+															<a href="javascript:void(0);" class="btn btn-icon btn-sm btn-light"><i class="feather-edit"></i></a>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">
+														<div class="form-check">
+															<input class="form-check-input" type="checkbox" value="" id="checkebox-sm4">
+															<label class="form-check-label" for="checkebox-sm4">
+																Karizma
+															</label>
+														</div>
+													</th>
+													<td>14-Feb-2022</td>
+													<td><span class="badge bg-soft-danger">Pending</span></td>
+													<td>
+														<div class="hstack gap-2 fs-15">
+															<a href="javascript:void(0);" class="btn btn-icon btn-sm btn-light"><i class="feather-download"></i></a>
+															<a href="javascript:void(0);" class="btn btn-icon btn-sm btn-light"><i class="feather-edit"></i></a>
+														</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+
+							</div>
+						</div>
+						<div class="col">
+							<div class="card">
+								<div class="card-header justify-content-between">
+									<div class="card-title">
+										Small Tables
+									</div>
+
+								</div>
+								<div class="card-body">
+									<div class="table-responsive">
+										<table class="table text-nowrap table-sm">
+											<thead>
+												<tr>
+													<th scope="col">Invoice</th>
+													<th scope="col">Created Date</th>
+													<th scope="col">Status</th>
+													<th scope="col">Action</th>
+
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<th scope="row">
+														<div class="form-check">
+															<input class="form-check-input" type="checkbox" value="" id="checkebox-sm" checked="">
+															<label class="form-check-label" for="checkebox-sm">
+																Zelensky
+															</label>
+														</div>
+													</th>
+													<td>25-Apr-2021</td>
+													<td><span class="badge bg-soft-success">Paid</span></td>
+													<td>
+														<div class="hstack gap-2 fs-15">
+															<a href="javascript:void(0);" class="btn btn-icon btn-sm btn-light"><i class="feather-download"></i></a>
+															<a href="javascript:void(0);" class="btn btn-icon btn-sm btn-light"><i class="feather-edit"></i></a>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">
+														<div class="form-check">
+															<input class="form-check-input" type="checkbox" value="" id="checkebox-sm1">
+															<label class="form-check-label" for="checkebox-sm1">
+																Kim Jong
+															</label>
+														</div>
+													</th>
+													<td>29-April-2022</td>
+													<td><span class="badge bg-soft-danger">Pending</span></td>
+													<td>
+														<div class="hstack gap-2 fs-15">
+															<a href="javascript:void(0);" class="btn btn-icon btn-sm btn-light"><i class="feather-download"></i></a>
+															<a href="javascript:void(0);" class="btn btn-icon btn-sm btn-light"><i class="feather-edit"></i></a>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">
+														<div class="form-check">
+															<input class="form-check-input" type="checkbox" value="" id="checkebox-sm2">
+															<label class="form-check-label" for="checkebox-sm2">
+																Obana
+															</label>
+														</div>
+													</th>
+													<td>30-Nov-2022</td>
+													<td><span class="badge bg-soft-success">Paid</span></td>
+													<td>
+														<div class="hstack gap-2 fs-15">
+															<a href="javascript:void(0);" class="btn btn-icon btn-sm btn-light"><i class="feather-download"></i></a>
+															<a href="javascript:void(0);" class="btn btn-icon btn-sm btn-light"><i class="feather-edit"></i></a>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<th scope="row">
+														<div class="form-check">
+															<input class="form-check-input" type="checkbox" value="" id="checkebox-sm3">
+															<label class="form-check-label" for="checkebox-sm3">
+																Sean Paul
+															</label>
+												</tr>
+												<tr>
+													<th scope="row">
+														<div class="form-check">
+															<input class="form-check-input" type="checkbox" value="" id="checkebox-sm4">
+															<label class="form-check-label" for="checkebox-sm4">
+																Karizma
+															</label>
+														</div>
+													</th>
+													<td>14-Feb-2022</td>
+													<td><span class="badge bg-soft-danger">Pending</span></td>
+													<td>
+														<div class="hstack gap-2 fs-15">
+															<a href="javascript:void(0);" class="btn btn-icon btn-sm btn-light"><i class="feather-download"></i></a>
+															<a href="javascript:void(0);" class="btn btn-icon btn-sm btn-light"><i class="feather-edit"></i></a>
+														</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- /Table -->
+
+				<!-- Customizer -->
+				<div class="customizer-links" id="setdata">
+					<ul class="sticky-sidebar">
+						<li class="sidebar-icons">
 							<a href="#" class="navigation-add" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="Theme">
 								<i data-feather="settings" class="feather-five"></i>
 							</a>
