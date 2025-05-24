@@ -19,17 +19,21 @@
 								<li><a href="chat.php">Chat Group</a></li>
 								<li class="submenu submenu-two"><a href="javascript:void(0);">Tasks<span class="menu-arrow inside-submenu"></span></a>
 									<ul>
-										<li id="review-calendar"><a href="review-calendar.html">Review calendar</a></li>
-										<li id="report"><a href="report.html">Report</a></li>
-										<li id="performance-self-review"><a href="performance-self-review.html">Performance self-review</a></li>
-										<li id="goal-progress"><a href="goal-progress.html">Goal progress</a></li>
-										<li id="team-feedback"><a href="team-feedback.html">Team feedback</a></li>
-										<li id="personal-development-plan"><a href="personal-development-plan.html">Personal development plan</a></li>
-										<li id="prioritize-tasks"><a href="prioritize-tasks.html">Prioritize tasks</a></li>
+										<li id="quote-generator"><a href="modules.quote-generator.php">Quote generator</a></li>
+										<li id="event-order"><a href="modules.event-order.php">Event order</a></li>
+										<li id="transport-fleet-record"><a href="modules.transport-fleet-record.php">Transport fleet record</a></li>
+										<li id="equipment-records"><a href="modules.equipment-records.php">Equipment records</a></li>
+										<li id="finance-record-expence-income"><a href="modules.finance-record-expence-income.php">Finace record expence, income</a></li>
+										<li id="personal-report"><a href="modules.personal-report.php">Personal repport</a></li>
+										<li id="recruitment"><a href="modules.recruitment.php">Recruitement</a></li>
+										<li id="employee-management"><a href="modules.employee-management.php">Employees Mangment</a></li>
+										<li id="leave-management"><a href="modules.leave-management.php">Leave Managment</a></li>
+										<li id="market-analysis"><a href="modules.market-analysis.php">Market analysis</a></li>
+
 									</ul>
 								</li>
-								<li><a href="email.php">Email</a></li>
-								<li><a href="file-manager.html">Shared Files Manager</a></li>
+								<li><a href="modules/email.php">Email</a></li>
+								<li><a href="modules/file-manager.php">Shared Files Manager</a></li>
 							</ul>
 						</li>
 					</ul>

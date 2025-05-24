@@ -403,7 +403,41 @@
 				</div>
 
 				<!-- Module button popup -->
-				
+				<div class="container mt-5">
+					<div class="modal-header">
+						<h4 class="modal-title">Task Module</h4>
+						<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+					</div>
+					<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">Launch demo modal</button>
+					<div class="modal" id="myModal">
+						<div class="modal-dialog">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h4 class="modal-title">Task Module</h4>
+									<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+								</div>
+								<div class="modal-body">
+									<div class="form">
+										<form>
+											<div class="form-group">
+												<label for="exampleInputEmail1">Task Name</label>
+												<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter Task Name">
+											</div>
+											<div class="form-group">
+												<label for="exampleInputPassword1">Task Description</label>
+												<input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter Task Description">
+											</div>
+											<button type="submit" class="btn btn-primary">Submit</button>	
+										</form>
+									</div>
+								</div>
+								<div class="modal-footer">
+									<button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 
 				<!-- /Module Header -->
 
