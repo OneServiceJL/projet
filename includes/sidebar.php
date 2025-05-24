@@ -16,7 +16,7 @@
 						<li class="submenu">
 							<a href="javascript:void(0);"><i data-feather="smartphone"></i><span>My Workspace</span><span class="menu-arrow"></span></a>
 							<ul>
-								<li><a href="chat.php">Chat Group</a></li>
+								<li><a href="modules/chat.php">Chat Group</a></li>
 								<li class="submenu submenu-two"><a href="javascript:void(0);">Tasks<span class="menu-arrow inside-submenu"></span></a>
 									<ul>
 										<li id="review-calendar"><a href="review-calendar.html">Review calendar</a></li>
