@@ -19,16 +19,16 @@
 								<li><a href="modules/chat.php">Chat Group</a></li>
 								<li class="submenu submenu-two"><a href="javascript:void(0);">Tasks<span class="menu-arrow inside-submenu"></span></a>
 									<ul>
-										<li id="quote-generator"><a href="modules.quote-generator.php">Quote generator</a></li>
-										<li id="event-order"><a href="modules.event-order.php">Event order</a></li>
-										<li id="transport-fleet-record"><a href="modules.transport-fleet-record.php">Transport fleet record</a></li>
-										<li id="equipment-records"><a href="modules.equipment-records.php">Equipment records</a></li>
-										<li id="finance-record-expence-income"><a href="modules.finance-record-expence-income.php">Finace record expence, income</a></li>
-										<li id="personal-report"><a href="modules.personal-report.php">Personal repport</a></li>
-										<li id="recruitment"><a href="modules.recruitment.php">Recruitement</a></li>
-										<li id="employee-management"><a href="modules.employee-management.php">Employees Mangment</a></li>
-										<li id="leave-management"><a href="modules.leave-management.php">Leave Managment</a></li>
-										<li id="market-analysis"><a href="modules.market-analysis.php">Market analysis</a></li>
+										<li id="quote-generator"><a href="modules/quote-generator.php">Quote generator</a></li>
+										<li id="event-order"><a href="modules/event-order.php">Event order</a></li>
+										<li id="transport-fleet-record"><a href="modules/transport-fleet-record.php">Transport fleet record</a></li>
+										<li id="equipment-records"><a href="modules/equipment-records.php">Equipment records</a></li>
+										<li id="finance-record-expence-income"><a href="modules/finance-record-expence-income.php">Finace record expence, income</a></li>
+										<li id="personal-report"><a href="modules/personal-report.php">Personal repport</a></li>
+										<li id="recruitment"><a href="modules/recruitment.php">Recruitement</a></li>
+										<li id="employee-management"><a href="modules/employee-management.php">Employees Mangment</a></li>
+										<li id="leave-management"><a href="modules/leave-management.php">Leave Managment</a></li>
+										<li id="market-analysis"><a href="modules/market-analysis.php">Market analysis</a></li>
 
 									</ul>
 								</li>

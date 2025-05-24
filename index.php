@@ -409,16 +409,16 @@
 					</div>
 					<div class="container mt-3 d-flex flex-wrap justify-content-center gap-3">
 						<div class="task-module d-flex flex-wrap justify-content-center gap-3">
-							<button type="button" class="btn btn-primary btn-lg" style="background-color: #5a5a5a; color: #fff;" data-bs-toggle="modal" data-bs-target="#eventModal">Event Order</button>
-							<button type="button" class="btn btn-primary btn-lg" style="background-color: #5a5a5a; color: #fff;" data-bs-toggle="modal" data-bs-target="#quoteModal">Quote Generator</button>
-							<button type="button" class="btn btn-primary btn-lg" style="background-color: #5a5a5a; color: #fff;" data-bs-toggle="modal" data-bs-target="#transportModal">Transport Fleet Record</button>
-							<button type="button" class="btn btn-primary btn-lg" style="background-color: #5a5a5a; color: #fff;" data-bs-toggle="modal" data-bs-target="#equipmentModal">Equipment Records</button>
-							<button type="button" class="btn btn-primary btn-lg" style="background-color: #5a5a5a; color: #fff;" data-bs-toggle="modal" data-bs-target="#financeModal">Finance Record Expence, Income</button>
-							<button type="button" class="btn btn-primary btn-lg" style="background-color: #5a5a5a; color: #fff;" data-bs-toggle="modal" data-bs-target="#personalModal">Personal Report</button>
-							<button type="button" class="btn btn-primary btn-lg" style="background-color: #5a5a5a; color: #fff;" data-bs-toggle="modal" data-bs-target="#recruitmentModal">Recruitment</button>
-							<button type="button" class="btn btn-primary btn-lg" style="background-color: #5a5a5a; color: #fff;" data-bs-toggle="modal" data-bs-target="#employeeModal">Employee Management</button>
-							<button type="button" class="btn btn-primary btn-lg" style="background-color: #5a5a5a; color: #fff;" data-bs-toggle="modal" data-bs-target="#leaveModal">Leave Management</button>
-							<button type="button" class="btn btn-primary btn-lg" style="background-color: #5a5a5a; color: #fff;" data-bs-toggle="modal" data-bs-target="#marketModal">Market Analysis</button>
+							<button type="button" class="btn btn-primary btn-sm" style="background-color: #5a5a5a; color: #fff;" data-bs-toggle="modal" data-bs-target="#eventModal">Event Order</button>
+							<button type="button" class="btn btn-primary btn-sm" style="background-color: #5a5a5a; color: #fff;" data-bs-toggle="modal" data-bs-target="#quoteModal">Quote Generator</button>
+							<button type="button" class="btn btn-primary btn-sm" style="background-color: #5a5a5a; color: #fff;" data-bs-toggle="modal" data-bs-target="#transportModal">Transport Fleet Record</button>
+							<button type="button" class="btn btn-primary btn-sm" style="background-color: #5a5a5a; color: #fff;" data-bs-toggle="modal" data-bs-target="#equipmentModal">Equipment Records</button>
+							<button type="button" class="btn btn-primary btn-sm" style="background-color: #5a5a5a; color: #fff;" data-bs-toggle="modal" data-bs-target="#financeModal">Finance Record Expence, Income</button>
+							<button type="button" class="btn btn-primary btn-sm" style="background-color: #5a5a5a; color: #fff;" data-bs-toggle="modal" data-bs-target="#personalModal">Personal Report</button>
+							<button type="button" class="btn btn-primary btn-sm" style="background-color: #5a5a5a; color: #fff;" data-bs-toggle="modal" data-bs-target="#recruitmentModal">Recruitment</button>
+							<button type="button" class="btn btn-primary btn-sm" style="background-color: #5a5a5a; color: #fff;" data-bs-toggle="modal" data-bs-target="#employeeModal">Employee Management</button>
+							<button type="button" class="btn btn-primary btn-sm" style="background-color: #5a5a5a; color: #fff;" data-bs-toggle="modal" data-bs-target="#leaveModal">Leave Management</button>
+							<button type="button" class="btn btn-primary btn-sm" style="background-color: #5a5a5a; color: #fff;" data-bs-toggle="modal" data-bs-target="#marketModal">Market Analysis</button>
 						</div>
 					</div>
 					<div class="container">
@@ -431,7 +431,7 @@
 									</div>
 									<div class="modal-body">
 										<div class="form">
-											<form action="modules.event-order.php" method="post">
+											<form action="modules/event-order.php" method="post">
 												<div class="form-group">
 													<label for="eventType">Event Type</label>
 													<select class="form-control" id="eventType">
