@@ -14,10 +14,10 @@
 	<link rel="shortcut icon" type="image/x-icon" href="assets/images/fevicon.png">
 
 	<!-- Bootstrap CSS -->
-	 
+
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
-	
-	
+
+
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 	<!-- Datetimepicker CSS -->
@@ -40,7 +40,12 @@
 	<link rel="stylesheet" href="assets/css/style.css">
 	<!-- Bootstrap Bundle JS (includes Popper for dropdowns) -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
+	<style>
+		.table td,
+		.table th {
+			vertical-align: middle;
+		}
+	</style>
 </head>
 
 <body>
@@ -396,22 +401,26 @@
 						</div>
 					</div>
 				</div>
+
+				<!-- Module button popup -->
+				
+
+				<!-- /Module Header -->
+
+				<div class="customizer-links" id="setdata">
+					<ul class="sticky-sidebar">
+						<li class="sidebar-icons">
+							<a href="#" class="navigation-add" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="Theme">
+								<i data-feather="settings" class="feather-five"></i>
+							</a>
+						</li>
+					</ul>
+				</div>
+
 			</div>
 		</div>
-		<!-- /Module Header -->
-
-		<div class="customizer-links" id="setdata">
-			<ul class="sticky-sidebar">
-				<li class="sidebar-icons">
-					<a href="#" class="navigation-add" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-original-title="Theme">
-						<i data-feather="settings" class="feather-five"></i>
-					</a>
-				</li>
-			</ul>
-		</div>
-
 	</div>
-	</div>
+
 	<!-- /Main Wrapper -->
 
 	<!-- jQuery -->
