@@ -60,13 +60,13 @@
 
 			<!-- Logo -->
 			<div class="header-left active">
-				<a href="index.html" class="logo logo-normal">
+				<a href="../index.php" class="logo logo-normal">
 					<img src="assets/images/Fevicon_2_top5_sai.png" alt="">
 				</a>
-				<a href="index.html" class="logo logo-white">
+				<a href="../index.php" class="logo logo-white">
 					<img src="assets/images/Fevicon_2_top5_sai.png" alt="">
 				</a>
-				<a href="index.html" class="logo-small">
+				<a href="../index.php" class="logo-small">
 					<img src="assets/images/Fevicon_2_top5_sai.png" alt="">
 				</a>
 				<a id="toggle_btn" href="javascript:void(0);">
@@ -89,9 +89,9 @@
 			<div class="dropdown mobile-user-menu">
 				<a href="javascript:void(0);" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
 				<div class="dropdown-menu dropdown-menu-right">
-					<a class="dropdown-item" href="profile.html">My Profile</a>
-					<a class="dropdown-item" href="general-settings.html">Settings</a>
-					<a class="dropdown-item" href="signin.html">Logout</a>
+					<a class="dropdown-item" href="profile.php">My Profile</a>
+					<a class="dropdown-item" href="general-settings.php">Settings</a>
+					<a class="dropdown-item" href="../signin.php">Logout</a>
 				</div>
 			</div>
 			<!-- /Mobile Menu -->

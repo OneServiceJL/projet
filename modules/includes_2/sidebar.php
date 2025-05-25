@@ -40,7 +40,7 @@
 				<li class="submenu-open">
 					<h6 class="submenu-hdr">MANAGEMENT</h6>
 					<ul>
-						<li class="submenu submenu-two"><a href="javascript:void(0);">Administration & Finance<span></span></a>
+						<li class="submenu submenu-two"><a href="javascript:void(0);"><i data-feather="dollar-sign"></i><span>Administration & Finance</span></a>
 							<ul>
 								<li><a href="administration-finance.php">Administration & Finance</a></li>
 								<li><a href="stock-management.php">Stock Management</a></li>
@@ -54,7 +54,7 @@
 								<li><a href="setting-management.php">Setting Management</a></li>
 							</ul>
 						</li>
-						<li class="submenu submenu-two"><a href="javascript:void(0);">Operations tasks<span></span></a>
+						<li class="submenu submenu-two"><a href="javascript:void(0);"><i data-feather="smartphone"></i><span>Operations tasks</span></a>
 							<ul>
 								<li><a href="venue-booking.php">Venue booking</a></li>
 								<li><a href="equipment-checklist.php">Equipment checklist</a></li>
@@ -65,7 +65,7 @@
 								<li><a href="email.php">Email</a></li>
 							</ul>
 						</li>
-						<li class="submenu submenu-two"><a href="javascript:void(0);">Business Development<span></span></a>
+						<li class="submenu submenu-two"><a href="javascript:void(0);"><i data-feather="bar-chart-2"></i><span>Business Development</span></a>
 							<ul>
 								<li><a href="custom-playbooks.php">Custom management books</a></li>
 								<li><a href="business-card-scanning.php">Business scanning</a></li>
@@ -76,7 +76,7 @@
 								<li><a href="performance-tracking.php">Performance Tracking</a></li>
 							</ul>
 						</li>
-						<li class="submenu submenu-two"><a href="javascript:void(0);">Human Resources<span></span></a>
+						<li class="submenu submenu-two"><a href="javascript:void(0);"><i data-feather="user"></i><span>Human Resources</span></a>
 							<ul>
 								<li><a href="employee-database.php">Employee database</a></li>
 								<li><a href="leave-management.php">Leave management</a></li>
@@ -88,7 +88,7 @@
 								<li><a href="documents-repository-centralized.php">Documents Repository Centralized</a></li>															
 							</ul>
 						</li>
-						<li class="submenu submenu-two"><a href="javascript:void(0);">Engineering<span></span></a>	
+						<li class="submenu submenu-two"><a href="javascript:void(0);"><i data-feather="settings"></i><span>Engineering</span></a>	
 							<ul>
 								<li><a href="role-based-permissions.php">Role-based permissions</a></li>
 								<li><a href="user-activity-logs.php">User activity logs</a></li>
@@ -103,7 +103,7 @@
 					<ul>
 						<li><a href="energy-radio.php"><i data-feather="package"></i><span>Energy Radio</span></a></li>
 						<li><a href="top-5-music.php"><i data-feather="clipboard"></i><span>Top 5 Music</span></a></li>
-						<li><a href="5-start-ivent.php"><i data-feather="truck"></i><span>5 Start ivent</span></a></li>
+						<li><a href="5-start-event.php"><i data-feather="truck"></i><span>5 Start Event</span></a></li>
 						<li><a href="top-5-films.php"><i data-feather="shopping-cart"></i><span>Top 5 Films</span></a></li>
 						<li><a href="top-5-images.php"><i data-feather="file-text"></i><span>Top 5 Images</span></a></li>
 						<li><a href="top-5-coms.php"><i data-feather="copy"></i><span>Top 5 Coms</span></a></li>

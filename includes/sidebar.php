@@ -103,7 +103,7 @@
 					<ul>
 						<li><a href="modules/energy-radio.php"><i data-feather="package"></i><span>Energy Radio</span></a></li>
 						<li><a href="modules/top-5-music.php"><i data-feather="clipboard"></i><span>Top 5 Music</span></a></li>
-						<li><a href="modules/5-start-ivent.php"><i data-feather="truck"></i><span>5 Start ivent</span></a></li>
+						<li><a href="modules/5-start-event.php"><i data-feather="truck"></i><span>5 Start Event</span></a></li>
 						<li><a href="modules/top-5-films.php"><i data-feather="shopping-cart"></i><span>Top 5 Films</span></a></li>
 						<li><a href="modules/top-5-images.php"><i data-feather="file-text"></i><span>Top 5 Images</span></a></li>
 						<li><a href="modules/top-5-coms.php"><i data-feather="copy"></i><span>Top 5 Coms</span></a></li>
