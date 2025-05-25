@@ -2,7 +2,7 @@
 
 <?php include 'includes_2/sidebar.php'; ?>
 
-
+<?php include 'modal.php' ?>
 
 <!-- Module Header -->
 
