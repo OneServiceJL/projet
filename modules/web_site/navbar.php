@@ -16,7 +16,10 @@
           <a class="nav-link" href="#products">Products</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="/admin/">Admin</a>
+          <a class="nav-link" href="/projet/admin/">Admin</a>
+        </li>
+        <li class="nav-item">
+          <a class="btn btn-primary ms-lg-4" href="contact.php">Contact</a>
         </li>
       </ul>
     </div>
