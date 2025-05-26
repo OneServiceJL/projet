@@ -135,11 +135,11 @@
                                     <div class="row">
                                         <div class="col-md-6 mb-3">
                                             <label for="firstName" class="form-label">First Name</label>
-                                            <input type="text" class="form-control" id="firstName" required>
+                                            <input type="text" class="form-control" id="firstName" placeholder="Enter Your First Name" required>
                                         </div>
                                         <div class="col-md-6 mb-3">
                                             <label for="lastName" class="form-label">Last Name</label>
-                                            <input type="text" class="form-control" id="lastName" required>
+                                            <input type="text" class="form-control" id="lastName" placeholder="Enter Your Last Name" required>
                                         </div>
                                     </div>
                                     <div class="mb-3">
@@ -165,15 +165,15 @@
                                     <h5 class="mb-4">Contact Information</h5>
                                     <div class="mb-3">
                                         <label for="email" class="form-label">Email Address</label>
-                                        <input type="email" class="form-control" id="email" required>
+                                        <input type="email" class="form-control" id="email" placeholder="Enter Your Email Address" required>
                                     </div>
                                     <div class="mb-3">
                                         <label for="phone" class="form-label">Phone Number</label>
-                                        <input type="tel" class="form-control" id="phone" required>
+                                        <input type="tel" class="form-control" id="phone" placeholder="Enter Your Phone Number" required>
                                     </div>
                                     <div class="mb-3">
                                         <label for="address" class="form-label">Address</label>
-                                        <textarea class="form-control" id="address" rows="3" required></textarea>
+                                        <textarea class="form-control" id="address" rows="3" placeholder="Enter Your Address" required></textarea>
                                     </div>
                                     <div class="d-flex justify-content-between">
                                         <button type="button" class="btn btn-secondary prev-step">Previous</button>
@@ -186,15 +186,15 @@
                                     <h5 class="mb-4">Account Setup</h5>
                                     <div class="mb-3">
                                         <label for="username" class="form-label">Username</label>
-                                        <input type="text" class="form-control" id="username" required>
+                                        <input type="text" class="form-control" id="username"  placeholder="Enter Your Username" required>
                                     </div>
                                     <div class="mb-3">
                                         <label for="password" class="form-label">Password</label>
-                                        <input type="password" class="form-control" id="password" required>
+                                        <input type="password" class="form-control" id="password" placeholder="Enter Your Password" required>
                                     </div>
                                     <div class="mb-3">
                                         <label for="confirmPassword" class="form-label">Confirm Password</label>
-                                        <input type="password" class="form-control" id="confirmPassword" required>
+                                        <input type="password" class="form-control" id="confirmPassword" placeholder="Enter Your Confirm " required>
                                     </div>
                                     <div class="mb-3 form-check">
                                         <input type="checkbox" class="form-check-input" id="terms" required>
