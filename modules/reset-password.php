@@ -1,37 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
-        <meta name="description" content="POS - Bootstrap Admin Template">
-		<meta name="keywords" content="admin, estimates, bootstrap, business, corporate, creative, invoice, html5, responsive, Projects">
-        <meta name="author" content="Dreamguys - Bootstrap Admin Template">
-        <meta name="robots" content="noindex, nofollow">
-        <title>Register</title>
-		
-		<!-- Favicon -->
-        <link rel="shortcut icon" type="image/x-icon" href="assets/images/fevicon.png">
-		
-		<!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-		
-        <!-- Fontawesome CSS -->
-		<link rel="stylesheet" href="assets/plugins/fontawesome/css/fontawesome.min.css">
-		<link rel="stylesheet" href="assets/plugins/fontawesome/css/all.min.css">
-		
-		<!-- Main CSS -->
-        <link rel="stylesheet" href="assets/css/style.css">
-
-        <!-- Custom CSS -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reset Password</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
     <style>
-        body{
-            
-            background-image:url("assets/images/bg_login.png");
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-            height: 100vh;
-        }
         .step-indicator {
             display: flex;
             justify-content: space-between;
@@ -95,16 +71,17 @@
             display: block;
         }
     </style>
-		
-    </head>
-    <body>
-
-        <div class="container py-5">
+</head>
+<body>
+    <div class="container d-flex justify-content-center py-2">
+        <img src="assets/images/fevicon.png" class="img-fluid" width="100" alt="POS - Bootstrap Admin Template">
+    </div>
+    <div class="container py-5">
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="card shadow"> <!-- Added card shadow for better visual hierarchy -->
                         <div class="card-header bg-primary text-white"> <!-- Added card header -->
-                            <h4 class="mb-0">Registration Form</h4>
+                            <h4 class="mb-0">Reset User Password</h4>
                         </div>
                         <div class="card-body">
                             <!-- Step Indicator - moved outside the form -->
@@ -117,14 +94,6 @@
                                     <div class="step-number">2</div>
                                     <div class="step-title">Contact Info</div>
                                 </div>
-                                <div class="step" data-step="3">
-                                    <div class="step-number">3</div>
-                                    <div class="step-title">Account Setup</div>
-                                </div>
-                                <div class="step" data-step="4">
-                                    <div class="step-number">4</div>
-                                    <div class="step-title">Confirmation</div>
-                                </div>
                             </div>
                             
                             <!-- Form Steps -->
@@ -132,28 +101,15 @@
                                 <!-- Step 1 -->
                                 <div class="form-step active" data-step="1">
                                     <h5 class="mb-4">Personal Information</h5>
-                                    <div class="row">
+                                    <div class="row align-items-center">
                                         <div class="col-md-6 mb-3">
-                                            <label for="firstName" class="form-label">First Name</label>
+                                            <label for="firstName" class="form-label">Username</label>
                                             <input type="text" class="form-control" id="firstName" placeholder="Enter Your First Name" required>
                                         </div>
                                         <div class="col-md-6 mb-3">
-                                            <label for="lastName" class="form-label">Last Name</label>
-                                            <input type="text" class="form-control" id="lastName" placeholder="Enter Your Last Name" required>
+                                            <label for="phone" class="form-label">Phone Number</label>
+                                            <input type="tel" class="form-control" id="phone" placeholder="Enter Your Phone Number" required>
                                         </div>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="gender" class="form-label">Gender</label>
-                                        <select class="form-select" id="gender" required>
-                                            <option value="" selected disabled>Select gender</option>
-                                            <option value="male">Male</option>
-                                            <option value="female">Female</option>
-                                            <option value="other">Other</option>
-                                        </select>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="dob" class="form-label">Date of Birth</label>
-                                        <input type="date" class="form-control" id="dob" required>
                                     </div>
                                     <div class="d-flex justify-content-end">
                                         <button type="button" class="btn btn-primary next-step">Next</button>
@@ -163,84 +119,24 @@
                                 <!-- Step 2 -->
                                 <div class="form-step" data-step="2">
                                     <h5 class="mb-4">Contact Information</h5>
-                                    <div class="mb-3">
-                                        <label for="email" class="form-label">Email Address</label>
-                                        <input type="email" class="form-control" id="email" placeholder="Enter Your Email Address" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="phone" class="form-label">Phone Number</label>
-                                        <input type="tel" class="form-control" id="phone" placeholder="Enter Your Phone Number" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="address" class="form-label">Address</label>
-                                        <textarea class="form-control" id="address" rows="3" placeholder="Enter Your Address" required></textarea>
-                                    </div>
-                                    <div class="d-flex justify-content-between">
-                                        <button type="button" class="btn btn-secondary prev-step">Previous</button>
-                                        <button type="button" class="btn btn-primary next-step">Next</button>
-                                    </div>
-                                </div>
-                                
-                                <!-- Step 3 -->
-                                <div class="form-step" data-step="3">
-                                    <h5 class="mb-4">Account Setup</h5>
-                                    <div class="mb-3">
-                                        <label for="username" class="form-label">Username</label>
-                                        <input type="text" class="form-control" id="username"  placeholder="Enter Your Username" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="password" class="form-label">Password</label>
-                                        <input type="password" class="form-control" id="password" placeholder="Enter Your Password" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="confirmPassword" class="form-label">Confirm Password</label>
-                                        <input type="password" class="form-control" id="confirmPassword" placeholder="Enter Your Confirm " required>
-                                    </div>
-                                    <div class="mb-3 form-check">
-                                        <input type="checkbox" class="form-check-input" id="terms" required>
-                                        <label class="form-check-label" for="terms">I agree to the terms and conditions</label>
-                                    </div>
-                                    <div class="d-flex justify-content-between">
-                                        <button type="button" class="btn btn-secondary prev-step">Previous</button>
-                                        <button type="button" class="btn btn-primary next-step">Next</button>
-                                    </div>
-                                </div>
-                                
-                                <!-- Step 4 -->
-                                <div class="form-step" data-step="4">
-                                    <h5 class="mb-4">Confirmation</h5>
-                                    <div class="alert alert-info">
-                                        <p>Please review your information before submitting.</p>
-                                    </div>
-                                    <div class="card mb-4">
-                                        <div class="card-header">
-                                            <h6>Personal Information</h6>
-                                        </div>
-                                        <div class="card-body">
-                                            <p><strong>Name:</strong> <span id="review-name"></span></p>
-                                            <p><strong>Gender:</strong> <span id="review-gender"></span></p>
-                                            <p><strong>Date of Birth:</strong> <span id="review-dob"></span></p>
-                                        </div>
-                                    </div>
-                                    <div class="card mb-4">
-                                        <div class="card-header">
-                                            <h6>Contact Information</h6>
-                                        </div>
-                                        <div class="card-body">
-                                            <p><strong>Email:</strong> <span id="review-email"></span></p>
-                                            <p><strong>Phone:</strong> <span id="review-phone"></span></p>
-                                            <p><strong>Address:</strong> <span id="review-address"></span></p>
-                                        </div>
-                                    </div>
-                                    <div class="card mb-4">
-                                        <div class="card-header">
-                                            <h6>Account Information</h6>
-                                        </div>
-                                        <div class="card-body">
-                                            <p><strong>Username:</strong> <span id="review-username"></span></p>
+                                    <div class="row align-items-center">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="email" class="form-label">Email Address</label>
+                                            <input type="email" class="form-control" id="email" placeholder="Enter Your Email Address" required>
                                         </div>
                                     </div>
                                     
+                                    <div class="row align-items-center">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="newPassword" class="form-label">New Password</label>
+                                            <input type="password" class="form-control" id="newPassword" placeholder="Enter Your New Password" required>
+                                        </div>
+                                    </div>
+                                    <div class="row align-items-center">
+                                        <div class="col-md-6 mb-3">
+                                            <label for="confirmPassword" class="form-label">Confirm Password</label>
+                                        <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm Your New Password" required>
+                                    </div>
                                     <div class="d-flex justify-content-between">
                                         <button type="button" class="btn btn-secondary prev-step">Previous</button>
                                         <button type="submit" class="btn btn-success">Submit</button>
@@ -381,19 +277,136 @@
             }
         });
     </script>
-		
-		<!-- jQuery -->
-        <script src="assets/js/jquery-3.7.1.min.js"></script>
-
-         <!-- Feather Icon JS -->
-		<script src="assets/js/feather.min.js"></script>
-		
-		<!-- Bootstrap Core JS -->
-        <script src="assets/js/bootstrap.bundle.min.js"></script>
-		
-		<!-- Custom JS -->
-        <script src="assets/js/theme-script.js"></script>	
-		<script src="assets/js/script.js"></script>
-
-    </body>
+   
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('registrationForm');
+            const steps = document.querySelectorAll('.step');
+            const formSteps = document.querySelectorAll('.form-step');
+            const nextButtons = document.querySelectorAll('.next-step');
+            const prevButtons = document.querySelectorAll('.prev-step');
+            let currentStep = 1;
+            
+            // Next button click handler
+            nextButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Validate current step before proceeding
+                    if (validateStep(currentStep)) {
+                        goToStep(currentStep + 1);
+                    }
+                });
+            });
+            
+            // Previous button click handler
+            prevButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    goToStep(currentStep - 1);
+                });
+            });
+            
+            // Form submission handler
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                // Here you would typically send the form data to the server
+                alert('Form submitted successfully!');
+                // Reset form and go to step 1
+                form.reset();
+                goToStep(1);
+            });
+            
+            function goToStep(step) {
+                // Update current step
+                currentStep = step;
+                
+                // Update step indicator
+                steps.forEach((stepElement, index) => {
+                    if (index + 1 === currentStep) {
+                        stepElement.classList.add('active');
+                        stepElement.classList.remove('completed');
+                    } else if (index + 1 < currentStep) {
+                        stepElement.classList.remove('active');
+                        stepElement.classList.add('completed');
+                    } else {
+                        stepElement.classList.remove('active', 'completed');
+                    }
+                });
+                
+                // Show/hide form steps
+                formSteps.forEach(formStep => {
+                    if (parseInt(formStep.dataset.step) === currentStep) {
+                        formStep.classList.add('active');
+                    } else {
+                        formStep.classList.remove('active');
+                    }
+                });
+                
+                // Update review section if we're on the last step
+                if (currentStep === 4) {
+                    updateReviewSection();
+                }
+            }
+            
+            function validateStep(step) {
+                let isValid = true;
+                const currentFormStep = document.querySelector(`.form-step[data-step="${step}"]`);
+                
+                // Check all required fields in the current step
+                const inputs = currentFormStep.querySelectorAll('[required]');
+                inputs.forEach(input => {
+                    if (!input.value.trim()) {
+                        input.classList.add('is-invalid');
+                        isValid = false;
+                    } else {
+                        input.classList.remove('is-invalid');
+                    }
+                });
+                
+                // Additional validation for specific steps
+                if (step === 3) {
+                    const password = document.getElementById('password').value;
+                    const confirmPassword = document.getElementById('confirmPassword').value;
+                    const terms = document.getElementById('terms').checked;
+                    
+                    if (password !== confirmPassword) {
+                        document.getElementById('password').classList.add('is-invalid');
+                        document.getElementById('confirmPassword').classList.add('is-invalid');
+                        isValid = false;
+                    }
+                    
+                    if (!terms) {
+                        document.getElementById('terms').classList.add('is-invalid');
+                        isValid = false;
+                    }
+                }
+                
+                return isValid;
+            }
+            
+            function updateReviewSection() {
+                // Personal Info
+                document.getElementById('review-name').textContent = 
+                    `${document.getElementById('firstName').value} ${document.getElementById('lastName').value}`;
+                document.getElementById('review-gender').textContent = 
+                    document.getElementById('gender').value;
+                document.getElementById('review-dob').textContent = 
+                    document.getElementById('dob').value;
+                
+                // Contact Info
+                document.getElementById('review-email').textContent = 
+                    document.getElementById('email').value;
+                document.getElementById('review-phone').textContent = 
+                    document.getElementById('phone').value;
+                document.getElementById('review-address').textContent = 
+                    document.getElementById('address').value;
+                
+                // Account Info
+                document.getElementById('review-username').textContent = 
+                    document.getElementById('username').value;
+            }
+        });
+    </script>
+</body>
 </html>

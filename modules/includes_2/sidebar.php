@@ -94,6 +94,7 @@
 								<li><a href="user-activity-logs.php">User activity logs</a></li>
 								<li><a href="ip-restrictions.php">IP restrictions</a></li>
 								<li><a href="user-management.php">User management</a></li>
+								<li><a href="reset-password.php">Reset Password</a></li>
 							</ul>
 						</li>
 					</ul>
