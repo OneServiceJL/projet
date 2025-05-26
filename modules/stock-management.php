@@ -33,7 +33,9 @@
 										<h4 class="card-title">Maintenance</h4>
 									</div>
 									<div class="card-body">
-										<div id="chart_line"></div>
+										<div id="chart_line">
+											<div id="chart_bar"></div>
+										</div>
 									</div>
 								</div>
 							</div>
