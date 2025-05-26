@@ -28,7 +28,6 @@
 										<li id="employee-management"><a href="modules/employee-management.php">Employees Mangment</a></li>  
 										<li id="leave-management"><a href="modules/leave-management.php">Leave Managment</a></li>
 										<li id="market-analysis"><a href="modules/market-analysis.php">Market analysis</a></li>
-
 									</ul>
 								</li>
 								<li><a href="modules/email.php">Email</a></li>
@@ -99,7 +98,7 @@
 					</ul>
 				</li>
 				<li class="submenu-open">
-					<h6 class="submenu-hdr">SALES</h6>
+					<h6 class="submenu-hdr">BUSINESS - SALES</h6>
 					<ul>
 						<li><a href="modules/energy-radio.php"><i data-feather="package"></i><span>Energy Radio</span></a></li>
 						<li><a href="modules/top-5-music.php"><i data-feather="clipboard"></i><span>Top 5 Music</span></a></li>
@@ -125,3 +124,4 @@
 	</div>
 </div>
 <!-- /Sidebar -->
+
