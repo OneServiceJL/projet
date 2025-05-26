@@ -1579,6 +1579,67 @@
 			}
 		</style>
 
+		<!-- Leave Form Modal -->
+		<div class="modal fade" id="leaveModal" tabindex="-1" aria-labelledby="leaveModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="leaveModalLabel">
+							<i class="fas fa-calendar me-2"></i> Request Leave
+						</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<form class="form-body row g-3 needs-validation" novalidate>
+						<!-- Leave Type -->
+						<div class="col-md-12">
+							<label class="form-label" for="leave-type">
+								<i class="fas fa-list me-1"></i> Leave Type
+							</label>
+							<select class="form-select" id="leave-type" required>
+								<option value="" selected disabled>Select</option>
+								<option value="annual">Annual</option>
+								<option value="sick">Sick</option>
+								<option value="family">Family</option>
+								<option value="maternity">Maternity</option>
+								<option value="paternity">Paternity</option>
+								<option value="bereavement">Bereavement</option>
+								<option value="other">Other (please specify)</option>
+							</select>
+							<div class="invalid-feedback">Please select a leave type</div>
+						</div>
+
+						<!-- Leave Date -->
+						<div class="col-md-6">
+							<label class="form-label" for="leave-date">
+								<i class="fas fa-calendar me-1"></i> Leave Date
+							</label>
+							<input type="date" class="form-control" id="leave-date" required>
+							<div class="invalid-feedback">Please select a date</div>
+						</div>
+
+						<!-- Leave Reason -->
+						<div class="col-md-6">
+							<label class="form-label" for="leave-reason">
+								<i class="fas fa-question-circle me-1"></i> Reason for Leave
+							</label>
+							<input type="text" class="form-control" id="leave-reason" required>
+							<div class="invalid-feedback">Please provide a reason for your leave</div>
+						</div>
+
+						<!-- Submit Button -->
+						<div class="col-12 text-end">
+							<button type="button" class="btn btn-secondary me-2" data-bs-dismiss="modal">
+								<i class="fas fa-times me-1"></i> Cancel
+							</button>
+							<button type="submit" class="btn btn-primary">
+								<i class="fas fa-paper-plane me-1"></i> Submit Leave Request
+							</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+
 		
 
 		<!-- Include these in your head or before closing body tag -->
