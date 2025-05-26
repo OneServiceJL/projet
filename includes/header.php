@@ -91,7 +91,7 @@
 				<div class="dropdown-menu dropdown-menu-right">
 					<a class="dropdown-item" href="profile.html">My Profile</a>
 					<a class="dropdown-item" href="general-settings.html">Settings</a>
-					<a class="dropdown-item" href="signin.html">Logout</a>
+					<a class="dropdown-item" href="login.php">Logout</a>
 				</div>
 			</div>
 			<!-- /Mobile Menu -->
