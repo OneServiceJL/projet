@@ -38,7 +38,7 @@
                     <div class="container-fluid h-custom">
                         <div class="row d-flex justify-content-center align-items-center h-100">
                             <div class="col-md-9 col-lg-6 col-xl-5">
-                                <img src="assets/images/fevicon.png"
+                                <img src="assets/images/TOP5SAI_LOGO_2.png"
                                     class="img-fluid" alt="Sample image">
                             </div>
                             <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
@@ -80,9 +80,9 @@
                         </div>
                     </div>
                     <div
-                        class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5 bg-primary">
+                        class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5" style="background-color: #052867">
                         <!-- Copyright -->
-                        <div class="text-white mb-3 mb-md-0">
+                        <div class="text-white mb-3 mb-md-0 align-items-center">
                             Copyrights © 2025 All Rights Reserved by TOP 5 SAI TIMS.
                         </div>
                         <!-- Copyright -->
