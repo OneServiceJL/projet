@@ -25,11 +25,12 @@
         <!-- Custom CSS -->
     <style>
         body{
-            background-color:rgb(94, 67, 247);
+            
             background-image:url("assets/images/bg_login.png");
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
+            height: 100vh;
         }
         .step-indicator {
             display: flex;
