@@ -9,7 +9,7 @@
 						<li class="submenu">
 							<a href="javascript:void(0);" class="subdrop active"><i data-feather="grid"></i><span>Dashboard</span><span class="menu-arrow"></span></a>
 							<ul>
-								<li><a href="../index.php" class="active">Admin Dashboard</a></li>
+								<li><a href="index.php" class="active">Admin Dashboard</a></li>
 							</ul>
 						</li>
 						<li class="submenu">
@@ -94,6 +94,7 @@
 								<li><a href="ip-restrictions.php">IP restrictions</a></li>
 								<li><a href="user-management.php">User management</a></li>
 								<li><a href="reset-password.php">Reset Password</a></li>
+								<li><a href="general-settings.php">General Settings</a></li>
 							</ul>
 						</li>
 					</ul>
