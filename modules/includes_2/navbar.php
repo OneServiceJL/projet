@@ -192,10 +192,10 @@
 		<div class="dropdown-menu menu-drop-user">
 			<div class="profilename">
 				<hr class="m-0">
-				<a class="dropdown-item" href="profile.html"> <i class="me-2" data-feather="user"></i> My Profile</a>
-				<a class="dropdown-item" href="general-settings.html"><i class="me-2" data-feather="settings"></i>Settings</a>
+				<a class="dropdown-item" href="profile.php"> <i class="me-2" data-feather="user"></i> My Profile</a>
+				<a class="dropdown-item" href="general-settings.php"><i class="me-2" data-feather="settings"></i>Settings</a>
 				<hr class="m-0">
-				<a class="dropdown-item logout pb-0" href="projet/login.php"><img src="assets/img/icons/log-out.svg" class="me-2" alt="img">Logout</a>
+				<a class="dropdown-item logout pb-0" href="../login.php"><img src="assets/img/icons/log-out.svg" class="me-2" alt="img">Logout</a>
 			</div>
 		</div>
 	</li>

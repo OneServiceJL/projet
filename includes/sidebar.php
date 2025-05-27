@@ -83,8 +83,7 @@
 								<li><a href="modules/attendance-tracking.php">Attendance tracking</a></li>								
 								<li><a href="modules/performance-evaluations.php">Performance evaluations</a></li>
 								<li><a href="modules/payroll-processing.php">Payroll processing</a></li>								
-								<li><a href="modules/training-and-development.php">Training and development</a></li>
-								<li><a href="modules/documents-repository-centralized.php">Documents Repository Centralized</a></li>															
+								<li><a href="modules/training-and-development.php">Training and development</a></li>															
 							</ul>
 						</li>
 						<li class="submenu submenu-two"><a href="javascript:void(0);">Engineering<span></span></a>	

@@ -84,8 +84,7 @@
 								<li><a href="attendance-tracking.php">Attendance tracking</a></li>								
 								<li><a href="performance-evaluations.php">Performance evaluations</a></li>
 								<li><a href="payroll-processing.php">Payroll processing</a></li>								
-								<li><a href="training-and-development.php">Training and development</a></li>
-								<li><a href="documents-repository-centralized.php">Documents Repository Centralized</a></li>															
+								<li><a href="training-and-development.php">Training and development</a></li>														
 							</ul>
 						</li>
 						<li class="submenu submenu-two"><a href="javascript:void(0);"><i data-feather="settings"></i><span>Engineering</span></a>	

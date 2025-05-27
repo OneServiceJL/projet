@@ -83,7 +83,7 @@
 				</span>
 			</a>
 
-			<?php include 'includes/navbar.php'; ?>
+			<?php include '/navbar.php'; ?>
 
 			<!-- Mobile Menu -->
 			<div class="dropdown mobile-user-menu">

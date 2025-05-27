@@ -33,12 +33,11 @@
 
     <div class="container container-fluid mt-5 p-5">
         <div class="row">
-           
-                <section class="vh-100">
-                    <div class="container-fluid h-custom">
-                        <div class="row d-flex justify-content-center align-items-center h-100">
-                            <div class="col-md-9 col-lg-6 col-xl-5">
-                                <img src="assets/images/TOP5SAI_LOGO_2.png"
+            <section class="vh-100">
+                <div class="container-fluid h-custom">
+                    <div class="row d-flex justify-content-center align-items-center h-100">
+                        <div class="col-md-9 col-lg-6 col-xl-5">
+                            <img src="assets/images/TOP5SAI_LOGO_2.png"
                                     class="img-fluid" alt="Sample image">
                             </div>
                             <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
@@ -68,11 +67,11 @@
                                                 Remember me
                                             </label>
                                         </div>
-                                        <a href="#!" class="text-body">Forgot password?</a>
+                                        <a href="modules/reset-password-form.php" class="text-body">Forgot password?</a>
                                     </div>
 
                                     <div class="text-center text-lg-start mt-4 pt-2">
-                                        <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-lg"
+                                        <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-lg"
                                             style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
                                     </div>
                                 </form>
@@ -88,9 +87,8 @@
                         <!-- Copyright -->
                     </div>
                 </section>
-            
+            </div>
         </div>
-    </div>
 
     <!-- /Main Wrapper -->
     <div class="customizer-links" id="setdata">
