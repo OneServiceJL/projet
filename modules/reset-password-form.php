@@ -81,7 +81,7 @@
                 <div class="col-lg-8">
                     <div class="card shadow"> <!-- Added card shadow for better visual hierarchy -->
                         <div class="card-header bg-primary text-white"> <!-- Added card header -->
-                            <h4 class="mb-0">Reset User Password</h4>
+                            <h4 class="mb-0">Request Password Reset Form</h4>
                         </div>
                         <div class="card-body">
                             <!-- Step Indicator - moved outside the form -->
@@ -128,7 +128,7 @@
                                     </div>
                                     <div class="d-flex justify-content-between">
                                         <button type="button" class="btn btn-primary prev-step">Previous</button>
-                                        <button type="submit" class="btn btn-primary">Submit</button>
+                                        <button type="submit" class="btn btn-primary" href='../login.php'>Submit</button>
                                     </div>
                                 </div>
                             </form>
