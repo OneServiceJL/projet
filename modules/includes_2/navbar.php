@@ -191,14 +191,6 @@
 		</a>
 		<div class="dropdown-menu menu-drop-user">
 			<div class="profilename">
-				<div class="profileset">
-					<span class="user-img"><img src="assets/img/profiles/avator1.jpg" alt="">
-						<span class="status online"></span></span>
-					<div class="profilesets">
-						<h6>John Smilga</h6>
-						<h5>Super Admin</h5>
-					</div>
-				</div>
 				<hr class="m-0">
 				<a class="dropdown-item" href="profile.html"> <i class="me-2" data-feather="user"></i> My Profile</a>
 				<a class="dropdown-item" href="general-settings.html"><i class="me-2" data-feather="settings"></i>Settings</a>
