@@ -11,6 +11,12 @@
 	<div class="content">
 		<?php include 'includes_2/nav_menu.php'; ?>
 
+			<div class="row">
+				<div class="col-md-12">
+					<?php include 'includes_2/chart.php'; ?>
+				</div>
+			</div>
+		
 
 		<?php include 'tables_models.php'; ?>
 
