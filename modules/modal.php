@@ -1677,3 +1677,126 @@
 				font-size: 0.85rem;
 			}
 		</style>
+
+
+		<!-- Add Employee Modal -->
+		<div class="modal fade" id="addEmployeeModal" tabindex="-1" aria-labelledby="addEmployeeModalLabel" aria-hidden="true">
+		    <div class="modal-dialog modal-dialog-centered modal-lg">
+		        <div class="modal-content">
+		            <div class="modal-header bg-primary text-white">
+		                <h5 class="modal-title" id="addEmployeeModalLabel">
+		                    <i class="fas fa-user-plus me-2"></i> Add New Employee
+		                </h5>
+		                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+		            </div>
+		            <div class="modal-body">
+		                <form class="needs-validation" novalidate>
+		                    <!-- Personal Information Section -->
+		                    <h6 class="mb-3 text-primary"><i class="fas fa-user-circle me-2"></i> Personal Information</h6>
+		                    <div class="row g-3">
+		                        <div class="col-md-4">
+		                            <label class="form-label" for="first-name">First Name*</label>
+		                            <input type="text" class="form-control" id="first-name" required>
+		                            <div class="invalid-feedback">Please enter your first name</div>
+		                        </div>
+		                        <div class="col-md-4">
+		                            <label class="form-label" for="middle-name">Middle Name</label>
+		                            <input type="text" class="form-control" id="middle-name">
+		                        </div>
+		                        <div class="col-md-4">
+		                            <label class="form-label" for="last-name">Last Name*</label>
+		                            <input type="text" class="form-control" id="last-name" required>
+		                            <div class="invalid-feedback">Please enter your last name</div>
+		                        </div>
+
+		                        <div class="col-md-6">
+		                            <label class="form-label" for="email">Email*</label>
+		                            <input type="email" class="form-control" id="email" required>
+		                            <div class="invalid-feedback">Please enter a valid email</div>
+		                        </div>
+		                        <div class="col-md-6">
+		                            <label class="form-label" for="phone">Phone*</label>
+		                            <input type="tel" class="form-control" id="phone" required>
+		                            <div class="invalid-feedback">Please enter a valid phone number</div>
+		                        </div>
+
+		                        <div class="col-md-4">
+		                            <label class="form-label" for="dob">Date of Birth*</label>
+		                            <input type="date" class="form-control" id="dob" required>
+		                            <div class="invalid-feedback">Please select your date of birth</div>
+		                        </div>
+		                        <div class="col-md-4">
+		                            <label class="form-label" for="gender">Gender*</label>
+		                            <select class="form-select" id="gender" required>
+		                                <option value="" selected disabled>Select</option>
+		                                <option value="male">Male</option>
+		                                <option value="female">Female</option>
+		                                <option value="other">Other</option>
+		                                <option value="prefer-not-to-say">Prefer not to say</option>
+		                            </select>
+		                            <div class="invalid-feedback">Please select your gender</div>
+		                        </div>
+		                        <div class="col-md-4">
+		                            <label class="form-label" for="nationality">Nationality*</label>
+		                            <input type="text" class="form-control" id="nationality" required>
+		                            <div class="invalid-feedback">Please enter your nationality</div>
+		                        </div>
+		                    </div>
+
+		                    <!-- Position Information -->
+		                    <h6 class="mb-3 mt-4 text-primary"><i class="fas fa-briefcase me-2"></i> Position Information</h6>
+		                    <div class="row g-3">
+		                        <div class="col-md-6">
+		                            <label class="form-label" for="position">Position*</label>
+		                            <select class="form-select" id="position" required>
+		                                <option value="" selected disabled>Select position</option>
+		                                <option value="radio-host">Radio Host/Presenter</option>
+		                                <option value="sound-engineer">Sound Engineer</option>
+		                                <option value="event-manager">Event Manager</option>
+		                                <option value="marketing">Marketing Specialist</option>
+		                                <option value="technical-support">Technical Support</option>
+		                                <option value="other">Other</option>
+		                            </select>
+		                            <div class="invalid-feedback">Please select a position</div>
+		                        </div>
+		                        <div class="col-md-6">
+		                            <label class="form-label" for="department">Department*</label>
+		                            <select class="form-select" id="department" required>
+		                                <option value="" selected disabled>Select department</option>
+		                                <option value="top5-sai">Top 5 Sai</option>
+		                                <option value="energy-radio">Energy Radio</option>
+		                                <option value="5star-event">5 Star Event</option>
+		                                <option value="administration">Administration</option>
+		                                <option value="technical">Technical</option>
+		                            </select>
+		                            <div class="invalid-feedback">Please select a department</div>
+		                        </div>
+
+		                        <div class="col-md-6">
+		                            <label class="form-label" for="salary">Salary (USD)*</label>
+		                            <input type="number" class="form-control" id="salary" min="0" required>
+		                            <div class="invalid-feedback">Please enter your salary</div>
+		                        </div>
+		                        <div class="col-md-6">
+		                            <label class="form-label" for="availability">Available Start Date*</label>
+		                            <input type="date" class="form-control" id="availability" required>
+		                            <div class="invalid-feedback">Please select your availability date</div>
+		                        </div>
+		                    </div>
+
+		                    <!-- Submit Button -->
+		                    <div class="row mt-4">
+		                        <div class="col-12 text-end">
+		                            <button type="button" class="btn btn-secondary me-2" data-bs-dismiss="modal">
+		                                <i class="fas fa-times me-1"></i> Cancel
+		                            </button>
+		                            <button type="submit" class="btn btn-primary">
+		                                <i class="fas fa-paper-plane me-1"></i> Add Employee
+		                            </button>
+		                        </div>
+		                    </div>
+		                </form>
+		            </div>
+		        </div>
+		    </div>
+		</div>

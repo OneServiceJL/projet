@@ -1,3 +1,28 @@
+
+<?php
+session_start();
+require_once "config/config.php";
+
+$error = '';
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $user = $_POST['username'] ?? '';
+    $pass = $_POST['password'] ?? '';
+    $stmt = $pdo->prepare('SELECT * FROM users WHERE username = :user AND password = :pass');
+    $stmt->execute(['user' => $user, 'pass' => $pass]);
+    if ($stmt->rowCount() > 0) {
+        $_SESSION['admin_logged_in'] = true;
+        header('Location: modules/index.php');
+        exit;
+    } else {
+        $error = 'Invalid username or password.';
+    }
+}
+if (isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in']) {
+    header('Location: modules/index.php');
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -89,18 +114,6 @@
                 </section>
             </div>
         </div>
-
-    <!-- /Main Wrapper -->
-    <div class="customizer-links" id="setdata">
-        <ul class="sticky-sidebar">
-            <li class="sidebar-icons">
-                <a href="#" class="navigation-add" data-bs-toggle="tooltip" data-bs-placement="left"
-                    data-bs-original-title="Theme">
-                    <i data-feather="settings" class="feather-five"></i>
-                </a>
-            </li>
-        </ul>
-    </div>
 
     <!-- jQuery -->
     <script src="assets/js/jquery-3.7.1.min.js"></script>
