@@ -1800,3 +1800,199 @@
 		        </div>
 		    </div>
 		</div>
+
+
+		<!-- Radio Program Management Modal -->
+		<style>
+			/* Add this to your stylesheet */
+			#radioProgramModal .modal-content {
+				border-radius: 10px;
+				overflow: hidden;
+			}
+
+			#radioProgramModal .modal-header {
+				padding: 1rem 1.5rem;
+			}
+
+			#radioProgramModal .modal-body {
+				padding: 1.5rem;
+			}
+
+			#radioProgramModal .form-label {
+				font-weight: 500;
+				margin-bottom: 0.5rem;
+			}
+
+			#radioProgramModal .form-check {
+				margin-bottom: 0.3rem;
+			}
+
+			#radioProgramModal .form-check-label {
+				margin-left: 0.5rem;
+			}
+
+			#radioProgramModal textarea {
+				resize: vertical;
+				min-height: 100px;
+			}
+		</style>
+		<div class="modal fade" id="radioProgramModal" tabindex="-1" aria-labelledby="radioProgramModalLabel" aria-hidden="true">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header bg-primary text-white">
+						<h5 class="modal-title" id="radioProgramModalLabel">Radio Program Details</h5>
+						<button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<form id="radioProgramForm">
+							<div class="row mb-3">
+								<div class="col-md-6">
+									<label for="programTitle" class="form-label">Program Title*</label>
+									<input type="text" class="form-control" id="programTitle" required>
+								</div>
+								<div class="col-md-6">
+									<label for="programHost" class="form-label">Host/DJ</label>
+									<select class="form-select" id="programHost">
+										<option value="">Select a host</option>
+										<option value="host1">Host 1</option>
+										<option value="host2">Host 2</option>
+										<option value="host3">Host 3</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="row mb-3">
+								<div class="col-md-6">
+									<label for="programGenre" class="form-label">Type*</label>
+									<select class="form-select" id="programGenre" required>
+										<option value="">Select a genre</option>
+										<option value="news">News</option>
+										<option value="talk">Talk Show</option>
+										<option value="music">Music</option>
+										<option value="sports">Sports</option>
+										<option value="comedy">Comedy</option>
+										<option value="drama">Radio Drama</option>
+										<option value="educational">Educational</option>
+										<option value="religious">Religious</option>
+										<option value="other">Other</option>
+									</select>
+								</div>
+								<div class="col-md-6">
+									<label for="programLanguage" class="form-label">Language*</label>
+									<input type="text" class="form-control" id="programLanguage" required>
+								</div>
+							</div>
+
+							<div class="row mb-3">
+								<div class="col-md-6">
+									<label for="startTime" class="form-label">Start Time*</label>
+									<input type="time" class="form-control" id="startTime" required>
+								</div>
+								<div class="col-md-6">
+									<label for="endTime" class="form-label">End Time*</label>
+									<input type="time" class="form-control" id="endTime" required>
+								</div>
+							</div>
+
+							<div class="row mb-3">
+								<div class="col-md-6">
+									<label class="form-label">Days of the Week*</label>
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" id="monday">
+										<label class="form-check-label" for="monday">Monday</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" id="tuesday">
+										<label class="form-check-label" for="tuesday">Tuesday</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" id="wednesday">
+										<label class="form-check-label" for="wednesday">Wednesday</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" id="thursday">
+										<label class="form-check-label" for="thursday">Thursday</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" id="friday">
+										<label class="form-check-label" for="friday">Friday</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" id="saturday">
+										<label class="form-check-label" for="saturday">Saturday</label>
+									</div>
+									<div class="form-check">
+										<input class="form-check-input" type="checkbox" id="sunday">
+										<label class="form-check-label" for="sunday">Sunday</label>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<label for="programDescription" class="form-label">Description</label>
+									<textarea class="form-control" id="programDescription" rows="5"></textarea>
+								</div>
+							</div>
+
+							<div class="row mb-3">
+								<div class="col-md-6">
+									<label for="programImage" class="form-label">Program Image</label>
+									<input type="file" class="form-control" id="programImage" accept="image/*">
+								</div>
+								<div class="col-md-6">
+									<label for="programStatus" class="form-label">Status</label>
+									<select class="form-select" id="programStatus">
+										<option value="active">Active</option>
+										<option value="inactive">Inactive</option>
+										<option value="on_break">On Break</option>
+									</select>
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+						<button type="button" class="btn btn-primary" id="saveProgram">Save Program</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			// Initialize modal
+			var radioProgramModal = new bootstrap.Modal(document.getElementById('radioProgramModal'));
+
+			// Show modal function
+			function showRadioProgramModal(programData = null) {
+				if (programData) {
+					// Populate form with existing data
+					document.getElementById('programTitle').value = programData.title || '';
+					document.getElementById('programHost').value = programData.host || '';
+					// ... populate other fields ...
+				} else {
+					// Clear form for new program
+					document.getElementById('radioProgramForm').reset();
+				}
+
+				radioProgramModal.show();
+			}
+
+			// Save button event listener
+			document.getElementById('saveProgram').addEventListener('click', function() {
+				// Validate and save form data
+				if (document.getElementById('radioProgramForm').checkValidity()) {
+					const programData = {
+						title: document.getElementById('programTitle').value,
+						host: document.getElementById('programHost').value,
+						genre: document.getElementById('programGenre').value,
+						// ... collect other field values ...
+					};
+
+					// Here you would typically send data to your backend
+					console.log('Saving program:', programData);
+
+					radioProgramModal.hide();
+				} else {
+					// Show validation errors
+					document.getElementById('radioProgramForm').reportValidity();
+				}
+			});
+		</script>

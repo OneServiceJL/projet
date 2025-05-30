@@ -1,8 +1,9 @@
-<?php include 'includes_2/header.php'; ?>
+<?php
+include 'includes_2/header.php';
+include 'includes_2/sidebar.php';
+include 'modal.php';
+?>
 
-<?php include 'includes_2/sidebar.php'; ?>
-
-<?php include 'modal.php' ?>
 
 
 <!-- Module Header -->
@@ -31,18 +32,37 @@
 			</div>
 		</div>
 	</div>
+
 	
-	<div class="row d-flex ml-2">
-		<div class="col-xl-12 col-sm-6 col-12 d-flex mb-3">
+
+	<!-- Table to display radio program details -->
+	<div class="row">
+		<div class="col-md-12">
 			<div class="card">
 				<div class="card-body">
-					<?php include 'fullcalendar.php'; ?>
+					<h5 class="card-title">Radio Programs</h5>
+					<table id="radioProgramsTable" class="table table-striped table-hover">
+						<thead>
+							<tr>
+								<th>Title</th>
+								<th>Host</th>
+								<th>Genre</th>
+								<th>Language</th>
+								<th>Start Time</th>
+								<th>End Time</th>
+								<th>Days of the Week</th>
+								<th>Description</th>
+								<th>Status</th>
+								<th>Actions</th>
+							</tr>
+						</thead>
+						<tbody id="radioProgramsTableBody">
+
+						</tbody>
+					</table>
 				</div>
 			</div>
 		</div>
 	</div>
-	
-
-
 
 	<?php include 'includes_2/footer.php'; ?>

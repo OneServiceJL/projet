@@ -17,7 +17,6 @@
 				</div>
 			</div>
 		
-
 		<?php include 'tables_models.php'; ?>
 
 	</div>
