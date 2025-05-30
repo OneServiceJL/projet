@@ -1725,6 +1725,17 @@
 		                            <input type="date" class="form-control" id="dob" required>
 		                            <div class="invalid-feedback">Please select your date of birth</div>
 		                        </div>
+								<div class="col-md-6">
+		                            <label class="form-label" for="address">Address*</label>
+		                            <input type="text" class="form-control" id="address" required>
+		                            <div class="invalid-feedback">Please enter your address</div>
+		                        </div>
+
+		                        <div class="col-md-4">
+		                            <label class="form-label" for="dob">ID Numder</label>
+		                            <input type="text" class="form-control" id="dob" required>
+		                            <div class="invalid-feedback">Please enter your ID number</div>
+		                        </div>
 		                        <div class="col-md-4">
 		                            <label class="form-label" for="gender">Gender*</label>
 		                            <select class="form-select" id="gender" required>
@@ -1799,6 +1810,102 @@
 		            </div>
 		        </div>
 		    </div>
+		</div>
+
+		
+		<!-- Department Management Modal -->
+		<div class="modal fade" id="addDepartmentModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="addDepartmentModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="addDepartmentModalLabel">Add Department</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<form class="row g-3 needs-validation" novalidate>
+							<!-- Department Information -->
+							<div class="col-md-6">
+								<label class="form-label" for="department-name">Department Name*</label>
+								<input type="text" class="form-control" id="department-name" required>
+								<div class="invalid-feedback">Please enter a department name</div>
+							</div>
+							<div class="col-md-6">
+								<label class="form-label" for="department-description">Description</label>
+								<input type="text" class="form-control" id="department-description">
+							</div>
+
+							<!-- Submit Button -->
+							<div class="row mt-4">
+								<div class="col-12 text-end">
+									<button type="button" class="btn btn-secondary me-2" data-bs-dismiss="modal">
+										<i class="fas fa-times me-1"></i> Cancel
+									</button>
+									<button type="submit" class="btn btn-primary">
+										<i class="fas fa-paper-plane me-1"></i> Add Department
+									</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		
+		<!-- Add Leave Modal -->
+		<div class="modal fade" id="addLeaveModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="addLeaveModalLabel" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="addLeaveModalLabel">Add Leave</h5>
+						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+					</div>
+					<div class="modal-body">
+						<form class="row g-3 needs-validation" novalidate>
+							<!-- Leave Information -->
+							<div class="col-md-6">
+								<label class="form-label" for="leave-type">Leave Type*</label>
+								<select class="form-select" id="leave-type" required>
+									<option value="" selected disabled>Select</option>
+									<option value="annual">Annual</option>
+									<option value="sick">Sick</option>
+									<option value="family">Family</option>
+									<option value="maternity">Maternity</option>
+									<option value="paternity">Paternity</option>
+									<option value="bereavement">Bereavement</option>
+									<option value="other">Other (please specify)</option>
+								</select>
+								<div class="invalid-feedback">Please select a leave type</div>
+							</div>
+							<div class="col-md-6">
+								<label class="form-label" for="leave-date">Leave Date*</label>
+								<input type="date" class="form-control" id="leave-date" required>
+								<div class="invalid-feedback">Please select a date</div>
+							</div>
+							<div class="col-md-6">
+								<label class="form-label" for="leave-reason">Reason for Leave</label>
+								<input type="text" class="form-control" id="leave-reason">
+							</div>
+							<div class="col-md-6">
+								<label class="form-label" for="leave-attachment">Attachment</label>
+								<input type="file" class="form-control" id="leave-attachment">
+							</div>
+
+							<!-- Submit Button -->
+							<div class="row mt-4">
+								<div class="col-12 text-end">
+									<button type="button" class="btn btn-secondary me-2" data-bs-dismiss="modal">
+										<i class="fas fa-times me-1"></i> Cancel
+									</button>
+									<button type="submit" class="btn btn-primary">
+										<i class="fas fa-paper-plane me-1"></i> Add Leave
+									</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
 		</div>
 
 

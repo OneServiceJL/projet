@@ -19,17 +19,17 @@
 						<a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#addDepartmentModal">
 							<i class="fas fa-building mr-2"></i> <span class="d-none d-md-inline">Add Department</span>
 						</a>
-						<a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#addPositionModal">
-							<i class="fas fa-building mr-2"></i> <span class="d-none d-md-inline">Add Position</span>
-						</a>
 						<a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#addEmployeeModal">
 							<i class="fas fa-user-plus mr-2"></i> <span class="d-none d-md-inline">Add employee</span>
 						</a>
-						<a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#employeeLeaveModal">
+						<a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#addLeaveModal">
 							<i class="fas fa-calendar mr-2"></i> <span class="d-none d-md-inline">Add Leave</span>
 						</a>
 						<a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#affectEmployeeModal">
 							<i class="fas fa-user mr-2"></i> <span class="d-none d-md-inline">Affect Employee</span>
+						</a>
+						<a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#addEmployeeRemarkModal">
+							<i class="fas fa-sticky-note mr-2"></i> <span class="d-none d-md-inline">Add Remark</span>
 						</a>
 					</div>
 				</div>
