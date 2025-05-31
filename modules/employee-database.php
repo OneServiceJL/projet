@@ -25,8 +25,8 @@
 						<a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#addLeaveModal">
 							<i class="fas fa-calendar mr-2"></i> <span class="d-none d-md-inline">Add Leave</span>
 						</a>
-						<a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#affectEmployeeModal">
-							<i class="fas fa-user mr-2"></i> <span class="d-none d-md-inline">Affect Employee</span>
+						<a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#addShiftModal">
+							<i class="fas fa-user mr-2"></i> <span class="d-none d-md-inline">Assign Shift</span>
 						</a>
 						<a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#addEmployeeRemarkModal">
 							<i class="fas fa-sticky-note mr-2"></i> <span class="d-none d-md-inline">Add Remark</span>

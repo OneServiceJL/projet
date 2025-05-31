@@ -10,21 +10,6 @@
 	<div class="content">
 		<?php include 'includes_2/nav_menu.php'; ?>
 
-		<!-- Chat Content-->
-		<div class="row">
-			<div class="col-md-12">
-				<div class="card">
-					<div class="card-body">
-						<div class="row">
-							
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- /Chat Content-->
-		
-	</div>
-</div>
+
 
 <?php include 'includes_2/footer.php'; ?>

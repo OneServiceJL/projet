@@ -1,8 +1,12 @@
 <?php
+include 'config/config.php';
+include 'config/function.php';
 include 'includes_2/header.php';
 include 'includes_2/sidebar.php';
 include 'modal.php';
 ?>
+
+
 
 
 
