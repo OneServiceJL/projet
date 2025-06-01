@@ -1,10 +1,35 @@
-<?php include 'includes_2/header.php'; ?>
+<?php
+// Au début de employee-database.php
+session_start();
+// Connexion à la base de données
+include '../config/config.php';
 
-<?php include 'includes_2/sidebar.php'; ?>
+// Inclusion des fichiers nécessaires
+include 'includes_2/header.php';
+include 'includes_2/sidebar.php';
 
-<?php include 'modal.php' ?>
+include 'Modal/departement_modal.php';
 
-<!-- Module Header -->
+
+if(isset($_SESSION['success_message']))
+{
+	?>	
+	<div class="alert alert-success">
+		<?php echo $_SESSION['success_message']; ?>
+	</div>
+	<?php
+	unset($_SESSION['success_message']);
+}
+if(isset($_SESSION['error_message']))
+{
+	?>
+	<div class="alert alert-danger">
+		<?php echo $_SESSION['error_message']; ?>
+	</div>
+	<?php
+	unset($_SESSION['error_message']);
+}
+?>
 
 <div style="margin-top: 2.5em;" class="page-wrapper">
 	<div class="content">
@@ -36,76 +61,64 @@
 			</div>
 		</div>
 
-		<!-- Chat Content-->
+		<!--Department Table-->
 		<div class="row">
 			<div class="col-md-12">
 				<div class="card">
 					<div class="card-body">
 						<div class="row">
 							<div class="col-md-12">
-								<h4>Employee Database</h4>
+								<h4>Department Table</h4>
 							</div>
 							<div class="col-md-12">
 								<table class="table">
 									<thead>
 										<tr>
-											<th>Image</th>
-											<th>First Name</th>
-											<th>Middle Name</th>
-											<th>Last Name</th>
-											<th>Email</th>
-											<th>Phone</th>
-											<th>Date of Birth</th>
-											<th>Gender</th>
-											<th>Nationality</th>
-											<th>Position Applied For</th>
-											<th>Preferred Department</th>
-											<th>Salary Expectation</th>
-											<th>Available Start Date</th>
+											<th>ID</th>
+											<th>Department Name</th>
+											<th>Department Code</th>
+											<th>Department Type</th>
+											<th>Department Head</th>
+											<th>Department Status</th>
 										</tr>
 									</thead>
 									<tbody>
-										<tr>
-											<td><img src="uploads/<?php echo $row['photo']; ?>" alt="Employee" class="img-fluid rounded-circle" style="width: 40px; height: 40px;"></td>
-											<td>John</td>
-											<td>Smith</td>
-											<td>Doe</td>
-											<td>john.doe@example.com</td>
-											<td>123-456-7890</td>
-											<td>March 12, 1990</td>
-											<td>Male</td>
-											<td>American</td>
-											<td>Software Engineer</td>
-											<td>IT</td>
-											<td>$100,000</td>
-											<td>May 1, 2023</td>
-										</tr>
-										<tr>
-											<td>Jane</td>
-											<td>Doe</td>
-											<td>Smith</td>
-											<td>jane.smith@example.com</td>
-											<td>098-765-4321</td>
-											<td>June 20, 1995</td>
-											<td>Female</td>
-											<td>British</td>
-											<td>Marketing Manager</td>
-											<td>Sales and Marketing</td>
-											<td>$80,000</td>
-											<td>June 15, 2023</td>
-										</tr>
+										<?php
+										$sql = "SELECT * FROM department";
+										$result = $conn->query($sql);
+
+										if ($result->num_rows > 0) {
+											// output data of each row
+											while ($row = $result->fetch_assoc()) {
+												echo '<tr>
+												<td>' . $row['id'] . '</td>
+												<td>' . $row['name'] . '</td>
+												<td>' . $row['code'] . '</td>
+												<td>' . $row['type'] . '</td>
+												<td>' . $row['head'] . '</td>
+												<td>' . $row['status'] . '</td>
+											</tr>';
+											}
+										} else {
+											echo "0 results";
+										}
+										?>
 									</tbody>
 								</table>
-
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-		<!-- /Chat Content-->
+
 
 	</div>
 </div>
 
+
+
+
+<!--Departement Modal-->
+<?php include 'Modal/departement_modal.php'; ?>
 <?php include 'includes_2/footer.php'; ?>
