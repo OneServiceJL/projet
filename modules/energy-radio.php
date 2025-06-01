@@ -19,7 +19,7 @@ include 'modal.php';
 					<i class="fas fa-chart-line mr-2"></i> Radio Program Management
 				</button>
 				<div class="dropdown-menu w-100" aria-labelledby="businessDropdown">
-					<a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#recordprogramModal">
+					<a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#recordprogramModal" href="view_all.php">
 						<i class="fas fa-handshake mr-2"></i> Record Program
 					</a>
 					<a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#energy-radioModal">
@@ -54,6 +54,7 @@ include 'modal.php';
 								<th>Description</th>
 								<th>Status</th>
 								<th>Actions</th>
+								
 							</tr>
 						</thead>
 						<tbody id="radioProgramsTableBody">
