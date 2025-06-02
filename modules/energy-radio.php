@@ -33,7 +33,81 @@ include 'modal.php';
 						<i class="fas fa-users mr-2"></i> Radio Program Management
 					</a>
 				</div>
+				
+			</div>&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+		
+			<div class="dropdown w-100">
+				<button class="btn btn-info w-100 dropdown-toggle" type="button" id="businessDropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+					<i class="fas fa-chart-line mr-2"></i> Radio Service Management
+				</button>
+				<div class="dropdown-menu w-100" aria-labelledby="businessDropdown">
+					<a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#recordprogramModal" href="view_all.php">
+						<i class="fas fa-handshake mr-2"></i> Periodic emmission GVMT & NGO
+					</a>
+					<a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#energy-radioModal">
+						<i class="fas fa-bullhorn mr-2"></i> Local emmission
+					</a>
+					<a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#radioProgramModal">
+						<i class="fas fa-users mr-2"></i>Announcement & press release
+					</a>
+					<a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#radioProgramModal">
+						<i class="fas fa-users mr-2"></i>Publi reportage
+					</a>
+					<a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#radioProgramModal">
+						<i class="fas fa-users mr-2"></i>Advertisments(jingle= ADVERT + Mentions)Goverment, corporate&
+					</a>
+					<a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#radioProgramModal">
+						<i class="fas fa-users mr-2"></i>Advertisments(jingle= ADVERT + Mentions)Local business & NGO
+					</a>
+					<a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#radioProgramModal">
+						<i class="fas fa-users mr-2"></i>Program sponsoring
+					</a>
+					<a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#radioProgramModal">
+						<i class="fas fa-users mr-2"></i>adverts/ sports production
+					</a>
+					<a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#radioProgramModal">
+						<i class="fas fa-users mr-2"></i>Radio drama production
+					</a>
+					<a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#radioProgramModal">
+						<i class="fas fa-users mr-2"></i>Live broadcasting(OUT OF THE STUDIO)
+					</a>
+					<a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#radioProgramModal">
+						<i class="fas fa-users mr-2"></i>live talkshow in the studio(GVMT&NGOS, PROJECTS, CORPORATES)
+					</a>
+					<a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#radioProgramModal">
+						<i class="fas fa-users mr-2"></i>Kwandika itangazo
+					</a>
+					<a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#radioProgramModal">
+						<i class="fas fa-users mr-2"></i>Performance ITORERO INDEMEZO
+					</a>
+					<a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#radioProgramModal">
+						<i class="fas fa-users mr-2"></i>KOGEZA IMIPIRA KURI TERRAIN
+					</a>
+					<a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#radioProgramModal">
+						<i class="fas fa-users mr-2"></i>Advertisment on website and social media 
+					</a>
+					<a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#radioProgramModal">
+						<i class="fas fa-users mr-2"></i>Royalities 7 broadcast syndication
+					</a>
+					<a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#radioProgramModal">
+						<i class="fas fa-users mr-2"></i>Broadcasting through other broadcasting media 
+					</a>
+					<a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#radioProgramModal">
+						<i class="fas fa-users mr-2"></i>Radio studio Rental
+					</a>
+					<a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#radioProgramModal">
+						<i class="fas fa-users mr-2"></i>Radio equipment Rental
+					</a>
+					<a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#radioProgramModal">
+						<i class="fas fa-users mr-2"></i>other Radio services 
+					</a>
+				</div>
 			</div>
+		</div>
+	</div>
+	
 		</div>
 	</div>
 
