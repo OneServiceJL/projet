@@ -1,4 +1,3 @@
-
 <?php
 session_start();
 
@@ -16,7 +15,7 @@ $error = '';
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = trim($_POST['username'] ?? '');
     $password = $_POST['password_hash'] ?? '';  // Note: Changed from password_hash to password
-    
+
     if (empty($username) || empty($password)) {
         $error = 'Username and password are required.';
     } else {
@@ -25,16 +24,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $stmt = $pdo->prepare('SELECT * FROM top_user WHERE username = :username LIMIT 1');
             $stmt->execute(['username' => $username]);
             $user = $stmt->fetch(PDO::FETCH_ASSOC);
-            
+
             if ($user && password_verify($password, $user['password_hash'])) {
                 // Password is correct, start session
                 $_SESSION['admin_logged_in'] = true;
                 $_SESSION['user_id'] = $user['id'];
                 $_SESSION['username'] = $user['username'];
-                
+
                 // Regenerate session ID to prevent fixation
                 session_regenerate_id(true);
-                
+
                 header('Location: modules/index.php');
                 exit;
             } else {
@@ -93,57 +92,80 @@ if (isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in']) {
                     <div class="row d-flex justify-content-center align-items-center h-100">
                         <div class="col-md-9 col-lg-6 col-xl-5">
                             <img src="assets/images/TOP5SAI_LOGO_2.png"
-                                    class="img-fluid" alt="Sample image">
-                            </div>
-                            <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
-                                <form action="login.php" method="post">
-                                    <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
-                                        <p class="lead fw-normal mb-0 me-3">Sign</p>
-                                    </div>
-                                    <!-- Email input -->
-                                    <div data-mdb-input-init class="form-outline mb-4">
-                                        <input type="text" id="form3Example3" class="form-control form-control-lg"
-                                            placeholder="Enter your username" />
-                                        <label class="form-label" for="form3Example3">Username</label>
-                                    </div>
+                                class="img-fluid" alt="Sample image">
+                        </div>
+                        <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+                            <form method="post">
+                                <!-- Email input -->
+                                <div class="form-outline mb-4">
+                                    <input type="email" name="u_email" id="form2Example1" class="form-control" />
+                                    <label class="form-label" for="form2Example1">Email address</label>
+                                </div>
 
-                                    <!-- Password input -->
-                                    <div data-mdb-input-init class="form-outline mb-3">
-                                        <input type="password" id="form3Example4" class="form-control form-control-lg"
-                                            placeholder="Enter password" />
-                                        <label class="form-label" for="form3Example4">Password</label>
-                                    </div>
+                                <!-- Password input -->
+                                <div class="form-outline mb-4">
+                                    <input type="password" name="u_pass" id="form2Example2" class="form-control" />
+                                    <label class="form-label" for="form2Example2">Password</label>
+                                </div>
 
-                                    <div class="d-flex justify-content-between align-items-center">
+                                <!-- 2 column grid layout for inline styling -->
+                                <div class="row mb-4">
+                                    <div class="col d-flex justify-content-center">
                                         <!-- Checkbox -->
-                                        <div class="form-check mb-0">
-                                            <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" />
-                                            <label class="form-check-label" for="form2Example3">
-                                                Remember me
-                                            </label>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked />
+                                            <label class="form-check-label" for="form2Example31"> Remember me </label>
                                         </div>
-                                        <a href="modules/reset-password-form.php" class="text-body">Forgot password?</a>
                                     </div>
 
-                                    <div class="text-center text-lg-start mt-4 pt-2">
-                                        <button type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-lg"
-                                            style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
+                                    <div class="col">
+                                        <!-- Simple link -->
+                                        <a href="#!">Forgot password?</a>
                                     </div>
-                                </form>
-                            </div>
+                                </div>
+
+                                <!-- Submit button -->
+                                <input type="submit" name="login" value="Login" class="btn btn-primary btn-block mb-4">
+                                <!-- Register buttons -->
+                                <div class="text-center">
+                                    <p>Not a member? <a href="">Register</a></p>
+
+                                </div>
+                            </form>
+                            <?php
+                            if (isset($_POST['login'])) {
+                                $u_email =  $_POST['u_email'];
+                                $u_pass =  $_POST['u_pass'];
+                                $query = "select * from all_users where u_email = '$u_email' and u_pass='$u_pass'";
+                                $user_obj = mysqli_query($con, $query);
+                                $row = mysqli_fetch_array($user_obj);
+                                $id = $row['u_id'];
+                                $num_of_row = mysqli_num_rows($user_obj);
+
+                                if ($num_of_row == 1) {
+                                    $_SESSION['u_id'] = $id;
+                                    echo "<script>window.open('index.php','_self');</script>";
+                                } else {
+                                    echo "<script>alert('Your email or passowrd is incorrect, try again...');</script>";
+                                }
+                            }
+
+
+                            ?>
                         </div>
                     </div>
-                    <div
-                        class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5" style="background-color: #052867">
-                        <!-- Copyright -->
-                        <div class="text-white mb-3 mb-md-0 align-items-center">
-                            Copyrights © 2025 All Rights Reserved by TOP 5 SAI TIMS.
-                        </div>
-                        <!-- Copyright -->
+                </div>
+                <div
+                    class="d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-4 px-4 px-xl-5" style="background-color: #052867">
+                    <!-- Copyright -->
+                    <div class="text-white mb-3 mb-md-0 align-items-center">
+                        Copyrights © 2025 All Rights Reserved by TOP 5 SAI TIMS.
                     </div>
-                </section>
-            </div>
+                    <!-- Copyright -->
+                </div>
+            </section>
         </div>
+    </div>
 
     <!-- jQuery -->
     <script src="assets/js/jquery-3.7.1.min.js"></script>
