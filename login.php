@@ -1,22 +1,52 @@
 
 <?php
 session_start();
-require_once "config/config.php";
+
+// Database connection
+try {
+    $pdo = new PDO("mysql:host=localhost;dbname=top5sai_management", "root", "");
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
+} catch (PDOException $e) {
+    die("Database connection failed: " . $e->getMessage());
+}
 
 $error = '';
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $user = $_POST['username'] ?? '';
-    $pass = $_POST['password'] ?? '';
-    $stmt = $pdo->prepare('SELECT * FROM users WHERE username = :user AND password = :pass');
-    $stmt->execute(['user' => $user, 'pass' => $pass]);
-    if ($stmt->rowCount() > 0) {
-        $_SESSION['admin_logged_in'] = true;
-        header('Location: modules/index.php');
-        exit;
+    $username = trim($_POST['username'] ?? '');
+    $password = $_POST['password_hash'] ?? '';  // Note: Changed from password_hash to password
+    
+    if (empty($username) || empty($password)) {
+        $error = 'Username and password are required.';
     } else {
-        $error = 'Invalid username or password.';
+        try {
+            // Get user by username only
+            $stmt = $pdo->prepare('SELECT * FROM top_user WHERE username = :username LIMIT 1');
+            $stmt->execute(['username' => $username]);
+            $user = $stmt->fetch(PDO::FETCH_ASSOC);
+            
+            if ($user && password_verify($password, $user['password_hash'])) {
+                // Password is correct, start session
+                $_SESSION['admin_logged_in'] = true;
+                $_SESSION['user_id'] = $user['id'];
+                $_SESSION['username'] = $user['username'];
+                
+                // Regenerate session ID to prevent fixation
+                session_regenerate_id(true);
+                
+                header('Location: modules/index.php');
+                exit;
+            } else {
+                $error = 'Invalid username or password.';
+            }
+        } catch (PDOException $e) {
+            $error = 'Database error: ' . $e->getMessage();
+        }
     }
 }
+
+// Redirect if already logged in
 if (isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in']) {
     header('Location: modules/index.php');
     exit;
@@ -72,9 +102,9 @@ if (isset($_SESSION['admin_logged_in']) && $_SESSION['admin_logged_in']) {
                                     </div>
                                     <!-- Email input -->
                                     <div data-mdb-input-init class="form-outline mb-4">
-                                        <input type="email" id="form3Example3" class="form-control form-control-lg"
-                                            placeholder="Enter a valid email address" />
-                                        <label class="form-label" for="form3Example3">Email address</label>
+                                        <input type="text" id="form3Example3" class="form-control form-control-lg"
+                                            placeholder="Enter your username" />
+                                        <label class="form-label" for="form3Example3">Username</label>
                                     </div>
 
                                     <!-- Password input -->

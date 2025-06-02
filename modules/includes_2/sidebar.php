@@ -2,7 +2,7 @@
 <div class="sidebar" id="sidebar">
 	<div class="sidebar-inner slimscroll">
 		<div id="sidebar-menu" class="sidebar-menu">
-			<ul>
+			<ul> <!--
 				<li class="submenu-open">
 					<h6 class="submenu-hdr">Main</h6>
 					<ul>
@@ -36,7 +36,7 @@
 							</ul>
 						</li>
 					</ul>
-				</li>
+				</li> 
 				<li class="submenu-open">
 					<h6 class="submenu-hdr">MANAGEMENT</h6>
 					<ul>
@@ -98,9 +98,9 @@
 							</ul>
 						</li>
 					</ul>
-				</li>
+				</li> -->
 				<li class="submenu-open">
-					<h6 class="submenu-hdr">SALES</h6>
+					<h6 class="submenu-hdr">MODULES</h6>
 					<ul>
 						<li><a href="energy-radio.php"><i data-feather="package"></i><span>Energy Radio</span></a></li>
 						<li><a href="top-5-music.php"><i data-feather="clipboard"></i><span>Top 5 Music</span></a></li>
